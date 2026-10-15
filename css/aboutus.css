@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.about-us {
+    background-color: #cf726b;
+    color: black;
+    font-family: 'Anton', sans-serif;
+    font-size: calc(1rem + 1.9vw);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2rem;
+    max-width: 100%;
+    min-height: 38rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.left-align p,
+.right-align p {
+    line-height: 1;
+    margin: 2rem;
+}

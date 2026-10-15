@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inicio | CALIFORNIA ESTUDIO</title>
+    <head>
+  <!-- Título -->
+  <title>CALIFORNIA | Marketing Digital Agency</title>
+
+  <!-- Meta básicos -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <meta name="author" content="CALIFORNIA">
+  <meta name="description" content="CALIFORNIA: agencia de marketing digital. Soluciones innovadoras para asegurar el crecimiento de tu negocio.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CALIFORNIA | Marketing Digital Agency">
+  <meta property="og:description" content="Soluciones innovadoras en Marketing Digital. Asegura el crecimiento de tu negocio.">
+    <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CALIFORNIA | Marketing Digital Agency">
+  <meta name="twitter:description" content="Soluciones innovadoras en Marketing Digital. Asegura el crecimiento de tu negocio.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="logos/CALIFORNIAESTUDIO_LOGO04.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="logos/CALIFORNIAESTUDIO_LOGO04.webp">
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Extensiones opcionales del tema (si las necesitas)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkgray: '#1a1a1a',
+          },
+          fontFamily: {
+            atkinson: ['"Atkinson Hyperlegible Mono"', 'monospace'],
+            didot: ['Didot', 'serif'],
+            roboto: ['Roboto', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome (el menú también intenta cargarlo si falta, pero lo dejamos explícito) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script src="js/galeria-data.js"></script>
+</head>
+    <style>
+        body {
+            background-color: #e6e5e4;
+        }
+
+        /* Contenedor del preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Estilos del spinner de carga */
+        .spinner {
+            width: 9px;
+            height: 9px;
+            position: relative;
+        }
+
+        .spinner div {
+            position: absolute;
+            width: 50%;
+            height: 150%;
+            background: #000000;
+            transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+            animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
+        }
+
+        /* Configuración de cada elemento del spinner */
+        .spinner div:nth-child(1) {
+            --delay: 0.1;
+            --rotation: 36;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(2) {
+            --delay: 0.2;
+            --rotation: 72;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(3) {
+            --delay: 0.3;
+            --rotation: 108;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(4) {
+            --delay: 0.4;
+            --rotation: 144;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(5) {
+            --delay: 0.5;
+            --rotation: 180;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(6) {
+            --delay: 0.6;
+            --rotation: 216;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(7) {
+            --delay: 0.7;
+            --rotation: 252;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(8) {
+            --delay: 0.8;
+            --rotation: 288;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(9) {
+            --delay: 0.9;
+            --rotation: 324;
+            --translation: 150;
+        }
+
+        .spinner div:nth-child(10) {
+            --delay: 1;
+            --rotation: 360;
+            --translation: 150;
+        }
+
+        /* Animación del spinner */
+        @keyframes spinner-fzua35 {
+
+            0%,
+            10%,
+            20%,
+            30%,
+            50%,
+            60%,
+            70%,
+            80%,
+            90%,
+            100% {
+                transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
+            }
+
+            50% {
+                transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%));
+            }
+        }
+
+        /* Clase para ocultar el preloader */
+        .preloader-oculto {
+            opacity: 0;
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    
+<div id="menu-root-california">
+  <!-- Botón hamburguesa sticky -->
+  <div class="menu-toggle-wrapper">
+    <div id="menuToggle"
+      class="menu-toggle text-white text-2xl cursor-pointer bg-black bg-opacity-70 rounded-full w-10 h-10 flex items-center justify-center shadow"
+      aria-label="Abrir/cerrar menú" aria-expanded="false" role="button" tabindex="0">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Menú desktop (overlay superior) -->
+  <div id="desktopMenu"
+       class="navigation-row hidden lg:flex flex-row items-center desktop-menu fixed-menu p-5"
+       style="width: 100%; height: 21%; display: none;">
+    <img src="logos/CALIFORNIAESTUDIO_LOGO_Menu1.webp" alt="CALIFORNIA"
+         class="responsive-logo w-auto mt-24" />
+    <div class="flex flex-col items-start justify-center flex-grow menu-links-container pl-5">
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="paginagaleria.html">Galería</a>
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="#aboutus">Quiénes Somos</a>
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="#contact">Contacto</a>
+    </div>
+  </div>
+
+  <!-- Menú móvil/tablet (slide desde la izquierda) -->
+  <div id="mobileMenuContainer" class="mobile-menu-container lg:hidden">
+    <div class="mobile-menu h-full flex flex-col p-5">
+      <img src="logos/CALIFORNIAESTUDIO_LOGO_Menu1.webp" alt="CALIFORNIA" class="responsive-logo w-auto mt-24" />
+      <div class="flex flex-col items-start justify-center flex-grow menu-links-container pl-5">
+        <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+           href="paginagaleria.html">Galería</a>
+        <a class="video-link nav-link responsive-nav-link w-full text-center py-3 px-5 text-gray-300"
+           href="#aboutus">Quiénes Somos</a>
+        <a class="video-link nav-link responsive-nav-link w-full text-center py-3 px-5 text-gray-300"
+           href="#contact">Contacto</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Botón hamburguesa por delante de todo el contenido del sitio y del propio menú */
+  .menu-toggle-wrapper {
+    position: fixed;
+    top: 1rem;    /* Tailwind top-4 */
+    left: 1rem;   /* Tailwind left-4 */
+    z-index: 1050; /* > overlays del menú y del video */
+  }
+
+  /* Estilos mínimos del menú */
+  .nav-link {
+    color: white !important;
+    text-decoration: none;
+    font-family: "Atkinson Hyperlegible Mono", monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  .desktop-menu {
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(5px);
+  }
+  .mobile-menu {
+    background-color: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(5px);
+  }
+  .responsive-logo {
+    display: block;
+    width: 16vh;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+  .responsive-nav-link { font-size: 2vh; }
+
+  @media (max-width: 1024px) {
+    .responsive-logo { height: 10rem; }
+    .menu-links-container { margin-top: -1.5rem; }
+  }
+
+  /* Overlays del menú: por debajo del botón */
+  .fixed-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1040; /* menor que .menu-toggle-wrapper */
+    transition: transform 0.3s ease;
+  }
+
+  /* Contenedor del menú móvil */
+  .mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1040; /* menor que .menu-toggle-wrapper */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: none;
+    width: 100%;
+    max-width: 20rem;
+    will-change: transform;
+    pointer-events: none; /* no captura clics cuando está cerrado */
+  }
+  .mobile-menu-container.open {
+    transform: translateX(0);
+    display: block;
+    pointer-events: auto; /* captura clics solo cuando está abierto */
+  }
+
+  .video-link:hover {
+    text-decoration: none;
+    color: #c8cbcc;
+    font-weight: bold;
+  }
+
+  /* Corchetes en hover/focus para items del menú */
+    #menu-root-california .nav-link {
+    display: inline-block; /* Permite centrar y reservar espacio de los pseudo-elementos */
+    position: relative;
+    }
+
+    /* Reservamos espacio para los corchetes sin mostrarlos inicialmente */
+    #menu-root-california .nav-link::before,
+    #menu-root-california .nav-link::after {
+    color: currentColor;         /* Toman el mismo color que el enlace */
+    font-weight: 700;            /* Un poco más marcado para los corchetes */
+    opacity: 0;                  /* Ocultos por defecto */
+    visibility: hidden;          /* No visibles, pero conservan el espacio */
+    transition: opacity .18s ease-in-out;
+    }
+
+    #menu-root-california .nav-link::before {
+    content: "[";
+    margin-right: .25rem;        /* Espacio entre el corchete y el texto */
+    }
+
+    #menu-root-california .nav-link::after {
+    content: "]";
+    margin-left: .25rem;         /* Espacio entre el texto y el corchete */
+    }
+
+    /* Mostrar corchetes al hover / focus con teclado / toque rápido en móvil */
+    #menu-root-california .nav-link:hover::before,
+    #menu-root-california .nav-link:hover::after,
+    #menu-root-california .nav-link:focus-visible::before,
+    #menu-root-california .nav-link:focus-visible::after,
+    #menu-root-california .nav-link:active::before,
+    #menu-root-california .nav-link:active::after {
+    opacity: 1;
+    visibility: visible;
+    }
+
+    /* Forzar el logo a blanco (todas las partes no transparentes) */
+    #menu-root-california .responsive-logo {
+    filter: brightness(0) invert(1);
+    /* -webkit-filter opcional para compatibilidad muy antigua */
+    -webkit-filter: brightness(0) invert(1);
+    }
+</style>
+
+<script>
+(() => {
+  if (window.__CALIFORNIA_MENU_INIT__) return;
+  window.__CALIFORNIA_MENU_INIT__ = true;
+
+  const ready = (fn) => {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  };
+
+  ready(() => {
+    const root = document.getElementById('menu-root-california');
+    const menuToggle = root ? root.querySelector('#menuToggle') : null;
+    const menuIcon = menuToggle ? menuToggle.querySelector('i') : null;
+    const desktopMenu = root ? root.querySelector('#desktopMenu') : null;
+    const mobileMenu = root ? root.querySelector('#mobileMenuContainer') : null;
+    const logo = root ? root.querySelector('.responsive-logo') : null;
+
+    let menuVisible = false;
+
+    function initializeMenu() {
+      if (desktopMenu) desktopMenu.style.display = 'none';
+      if (mobileMenu) {
+        mobileMenu.style.display = 'none';
+        mobileMenu.classList.remove('open');
+        mobileMenu.style.pointerEvents = 'none';
+      }
+      if (menuIcon) menuIcon.className = 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function updateMenuVisibility() {
+      const isDesktop = window.innerWidth >= 1024;
+
+      if (isDesktop) {
+        if (desktopMenu) desktopMenu.style.display = menuVisible ? 'flex' : 'none';
+        if (mobileMenu) {
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.display = 'none';
+          mobileMenu.style.pointerEvents = 'none';
+        }
+      } else {
+        if (desktopMenu) desktopMenu.style.display = 'none';
+        if (mobileMenu) {
+          mobileMenu.style.display = 'block';
+          if (menuVisible) {
+            mobileMenu.classList.add('open');
+            mobileMenu.style.pointerEvents = 'auto';
+          } else {
+            mobileMenu.classList.remove('open');
+            mobileMenu.style.pointerEvents = 'none';
+          }
+        }
+      }
+
+      if (menuIcon) menuIcon.className = menuVisible ? 'fas fa-times' : 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', menuVisible ? 'true' : 'false');
+    }
+
+    // Init
+    initializeMenu();
+
+    // Toggle click/Enter
+    if (menuToggle) {
+      menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        menuVisible = !menuVisible;
+        updateMenuVisibility();
+      });
+      menuToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          menuVisible = !menuVisible;
+          updateMenuVisibility();
+        }
+      });
+    }
+
+    // Cerrar al pulsar un enlace (solo móvil)
+    root.querySelectorAll('#mobileMenuContainer .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 1024) {
+          menuVisible = false;
+          updateMenuVisibility();
+        }
+      });
+    });
+
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuVisible) {
+        menuVisible = false;
+        updateMenuVisibility();
+      }
+    });
+
+    // Ajuste en resize: resetea a oculto
+    window.addEventListener('resize', () => {
+      menuVisible = false;
+      if (window.innerWidth >= 1024) {
+        if (desktopMenu) desktopMenu.style.display = 'none';
+        if (mobileMenu) {
+          mobileMenu.style.display = 'none';
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.pointerEvents = 'none';
+        }
+      } else {
+        if (mobileMenu) {
+          mobileMenu.style.display = 'block';
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.pointerEvents = 'none';
+        }
+        if (desktopMenu) desktopMenu.style.display = 'none';
+      }
+      if (menuIcon) menuIcon.className = 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    });
+
+    // Logo clicable -> home
+    if (logo) {
+      logo.style.cursor = 'pointer';
+      logo.addEventListener('click', () => { window.location.href = 'index.html'; });
+    }
+
+    // Scroll suave para secciones
+    root.querySelectorAll('a[href="#gallery"], a[href="#contact"], a[href="#aboutus"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          e.preventDefault();
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          if (history.pushState) history.pushState(null, null, targetId);
+          else window.location.hash = targetId;
+        }
+      });
+    });
+
+    // Carga Font Awesome si no está (respaldo)
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+      const fa = document.createElement('link');
+      fa.rel = 'stylesheet';
+      fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
+      document.head.appendChild(fa);
+    }
+  });
+})();
+</script>
+    <!-- Preloader - Pantalla de carga inicial -->
+    <div class="preloader" id="preloader">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+
+
+
+    
+    <link rel="stylesheet" href="css/galeriapag.css">
+    <style>
+       .load-more-container {
+            position: relative;
+            margin-top: -3rem;
+            padding-bottom: 3rem;
+            z-index: 50;
+        }
+
+        .gallery-item {
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item.hidden {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(4px);
+            }
+        }
+
+        .animate-bounce-custom {
+            animation: bounce 1s infinite;
+        }
+
+        .gallery-item {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .border-gray-700 {
+            border-color: #3a3a3a;
+        }
+
+        /* --- Galería: B/N por defecto y color al hover (estilo carrusel) --- */
+        .gallery-media {
+        filter: grayscale(1);
+        transition: filter .25s ease, transform .3s ease;
+        }
+        @media (hover: hover) and (pointer: fine) {
+        /* En equipos con hover real, mostramos color al pasar el mouse */
+        .group:hover .gallery-media { filter: none; }
+        }
+
+        /* Mantener el overlay oculto en hover para no oscurecer el color */
+        .gallery-overlay { transition: opacity .25s ease; }
+        @media (hover: hover) and (pointer: fine) {
+        .group:hover .gallery-overlay { opacity: 0 !important; }
+        }
+    </style>
+
+
+
+    <div class="w-full pb-8 md:pb-12 lg:pb-16">
+        <div class="bg-[#e6e5e4] text-black pt-10 pb-14 px-8 md:px-18 text-center" style="text-align: start;margin-top: 3%;padding-left: 3%;">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 font-['Archivo_Black'] tracking-tight">GALERÍA</h1>
+            <p class="text-xl md:text-2xl max-w-3xl opacity-90 mx-0">Estamos aquí para hacer realidad tus proyectos
+                creativos.</p>
+        </div>
+
+        <div id="gallery-container"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 w-full mb-20 md:mb-24 lg:mb-32 px-6 md:px-12">
+            
+        </div>
+
+        <!-- Contenedor para cargar más imágenes -->
+        <div id="load-more-container" class="load-more-container">
+            <div class="flex flex-col items-center">
+                <button id="load-previous-btn" class="flex justify-center items-center mx-auto px-8 py-4 bg-gradient-to-br from-[#f5f5f5] to-[#e5e5e5] border border-opacity-10 border-black rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.8)] cursor-pointer transition-all duration-300 font-semibold text-gray-800 hover:translate-y-[-2px] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.8)] hover:bg-gradient-to-br hover:from-[#f9f9f9] hover:to-[#ebebeb] active:translate-y-0 active:shadow-[0_2px_10px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.8)] mb-4 max-w-[280px] w-full">
+                    <span id="previous-btn-text">Anteriores</span>
+                    <svg class="w-5 h-5 transform rotate-180 ml-3 transition-transform duration-300" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </button>
+                <button id="load-more-btn" class="flex justify-center items-center mx-auto px-8 py-4 bg-gradient-to-br from-[#f5f5f5] to-[#e5e5e5] border border-opacity-10 border-black rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.8)] cursor-pointer transition-all duration-300 font-semibold text-gray-800 hover:translate-y-[-2px] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15),inset_0_1px_0_rgba(255,255,255,0.8)] hover:bg-gradient-to-br hover:from-[#f9f9f9] hover:to-[#ebebeb] active:translate-y-0 active:shadow-[0_2px_10px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.8)] max-w-[280px] w-full">
+                    <span id="load-more-btn-text">Cargar más imágenes</span>
+                    <svg class="w-5 h-5 ml-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </button>
+                <div id="progress-text" class="text-sm text-gray-600 mt-2 text-center">
+                    Mostrando <span id="visible-count">15</span> de
+                    <span id="total-count">0</span> imágenes
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+        // --- Galería estática: las imágenes salen de js/galeria-data.js (ver LEEME) ---
+        const GALERIA = window.GALERIA || [];
+        function escHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+        function renderItem(archivo){
+            const nombre = archivo.replace(/\.[^.]+$/, '');
+            return '<div class="group overflow-hidden w-full gallery-item">' +
+              '<div class="relative overflow-hidden w-full aspect-video rounded-md">' +
+              '<img src="imggaleria/' + encodeURI(archivo) + '" alt="' + escHtml(nombre) + '" class="gallery-media w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" decoding="async">' +
+              '<div class="gallery-overlay absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 transition-opacity duration-300">' +
+              '<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-5.197-2.598A1 1 0 008 9.446v5.108a1 1 0 001.555.832l5.197-2.598a1 1 0 000-1.789z" /></svg></div></div>' +
+              '<div class="mt-4 border-t border-gray-700 pt-3">' +
+              '<div class="flex justify-start text-sm md:text-base"><p class="text-black-500 font-medium">' + escHtml(nombre) + '</p></div>' +
+              '<div class="flex justify-end text-sm text-gray-400 border-t border-gray-700 mt-2 pt-2"><p>Descripción o categoría del proyecto</p></div>' +
+              '<div class="flex justify-start text-sm text-gray-400 border-t border-gray-700 mt-2 pt-2"><p>Campaña CaliStudio</p></div></div></div>';
+        }
+        function fetchMore(start, count){
+            const html = GALERIA.slice(start, start + count).map(renderItem).join('');
+            return Promise.resolve({ text: () => Promise.resolve(html) });
+        }
+        document.getElementById('gallery-container').innerHTML = GALERIA.slice(0, 6).map(renderItem).join('');
+        document.getElementById('total-count').textContent = GALERIA.length;
+        document.getElementById('visible-count').textContent = Math.min(6, GALERIA.length);
+
+            const galleryContainer = document.getElementById('gallery-container');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            const loadPreviousBtn = document.getElementById('load-previous-btn');
+            const previousBtnText = document.getElementById('previous-btn-text');
+            const loadMoreBtnText = document.getElementById('load-more-btn-text');
+            const progressText = document.getElementById('progress-text');
+            const visibleCount = document.getElementById('visible-count');
+
+            const totalImages = GALERIA.length;
+            const imagesPerLoad = 6; 
+            let loadedCount = Math.min(6, GALERIA.length);
+            let currentVisibleStart = 0;
+            let currentVisibleEnd = loadedCount - 1;
+
+            // Observador de intersección para ocultar imágenes fuera de vista
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        const index = Array.from(galleryContainer.children).indexOf(entry.target);
+                        if (index < currentVisibleStart || index > currentVisibleEnd) {
+                            entry.target.classList.add('hidden');
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observar todas las imágenes iniciales
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                observer.observe(item);
+            });
+
+            function updateButtonTexts() {
+                if (currentVisibleStart === 0) {
+                    previousBtnText.textContent = 'Última página';
+                } else {
+                    previousBtnText.textContent = 'Anteriores';
+                }
+
+                if (currentVisibleEnd >= totalImages - 1) {
+                    loadMoreBtnText.textContent = 'Primera página';
+                } else {
+                    loadMoreBtnText.textContent = 'Cargar más imágenes';
+                }
+            }
+
+            function smoothScrollToFirstVisible() {
+                const firstVisible = galleryContainer.children[currentVisibleStart];
+                if (firstVisible) {
+                    // Primero coloca el elemento justo arriba del viewport
+                    firstVisible.scrollIntoView({ behavior: 'auto', block: 'start' });
+                    
+                    // Luego haz un scroll suave para ajustar la posición
+                    setTimeout(() => {
+                        window.scrollBy({
+                            top: firstVisible.getBoundingClientRect().top - 20,
+                            behavior: 'smooth'
+                        });
+                    }, 10);
+                }
+            }
+
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function () {
+                    if (currentVisibleEnd >= totalImages - 1) {
+                        // Ir a la primera página
+                        currentVisibleStart = 0;
+                        currentVisibleEnd = loadedCount - 1;
+                        loadImages(currentVisibleStart, currentVisibleEnd);
+                    } else {
+                        // Cargar más imágenes
+                        loadMoreBtn.classList.add('loading');
+                        loadMoreBtn.disabled = true;
+
+                        fetchMore(currentVisibleEnd + 1, imagesPerLoad)
+                            .then(response => response.text())
+                            .then(html => {
+                                galleryContainer.insertAdjacentHTML('beforeend', html);
+
+                                // Ocultar las imágenes más antiguas que ya no son visibles
+                                currentVisibleStart += imagesPerLoad;
+                                currentVisibleEnd += imagesPerLoad;
+
+                                // Mostrar solo las nuevas imágenes y ocultar las antiguas
+                                const allItems = Array.from(galleryContainer.children);
+                                allItems.forEach((item, index) => {
+                                    if (index >= currentVisibleStart && index <= currentVisibleEnd) {
+                                        item.classList.remove('hidden');
+                                    } else {
+                                        item.classList.add('hidden');
+                                    }
+                                    observer.observe(item);
+                                });
+
+                                visibleCount.textContent = Math.min(currentVisibleEnd + 1, totalImages);
+
+
+                                loadMoreBtn.classList.remove('loading');
+                                loadMoreBtn.disabled = false;
+
+                                // Desplazar suavemente a la primera imagen nueva (animación de arriba a abajo)
+                                smoothScrollToFirstVisible();
+
+                                // Mostrar el botón "Anteriores" si no está al inicio
+                                if (currentVisibleStart > 0) {
+                                    loadPreviousBtn.classList.remove('hidden');
+                                }
+
+                                updateButtonTexts();
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                loadMoreBtn.classList.remove('loading');
+                                loadMoreBtn.disabled = false;
+                            });
+                    }
+
+                    updateButtonTexts();
+                });
+            }
+
+            if (loadPreviousBtn) {
+                loadPreviousBtn.addEventListener('click', function () {
+                    if (currentVisibleStart === 0) {
+                        // Ir a la última página
+                        const lastPageStart = Math.floor((totalImages - 1) / imagesPerLoad) * imagesPerLoad;
+                        const lastPageEnd = totalImages - 1;
+
+                        // Si aún no se han cargado todas las imágenes necesarias, hay que solicitarlas
+                        if (galleryContainer.children.length < totalImages) {
+                            fetchMore(galleryContainer.children.length, totalImages - galleryContainer.children.length)
+                                .then(response => response.text())
+                                .then(html => {
+                                    galleryContainer.insertAdjacentHTML('beforeend', html);
+                                    const allItems = Array.from(galleryContainer.children);
+                                    allItems.forEach(item => observer.observe(item));
+                                    currentVisibleStart = lastPageStart;
+                                    currentVisibleEnd = lastPageEnd;
+                                    loadImages(currentVisibleStart, currentVisibleEnd);
+                                })
+                                .catch(error => console.error('Error al cargar imágenes finales:', error));
+                        } else {
+                            currentVisibleStart = lastPageStart;
+                            currentVisibleEnd = lastPageEnd;
+                            loadImages(currentVisibleStart, currentVisibleEnd);
+                        }
+                    }
+                    else {
+                        // Mostrar imágenes anteriores
+                        loadPreviousBtn.classList.add('loading');
+                        loadPreviousBtn.disabled = true;
+
+                        currentVisibleStart = Math.max(0, currentVisibleStart - imagesPerLoad);
+                        currentVisibleEnd = Math.max(0, currentVisibleEnd - imagesPerLoad);
+
+                        // Mostrar solo las imágenes anteriores y ocultar las nuevas
+                        const allItems = Array.from(galleryContainer.children);
+                        allItems.forEach((item, index) => {
+                            if (index >= currentVisibleStart && index <= currentVisibleEnd) {
+                                item.classList.remove('hidden');
+                            } else {
+                                item.classList.add('hidden');
+                            }
+                            observer.observe(item);
+                        });
+
+                        visibleCount.textContent = Math.min(currentVisibleEnd + 1, totalImages);
+
+                        // Desplazar suavemente a la primera imagen anterior (animación de abajo a arriba)
+                        smoothScrollToFirstVisible();
+
+                        loadPreviousBtn.classList.remove('loading');
+                        loadPreviousBtn.disabled = false;
+
+                        // Ocultar el botón "Anteriores" si está al inicio
+                        if (currentVisibleStart === 0) {
+                            loadPreviousBtn.classList.add('hidden');
+                        }
+
+                        // Mostrar el botón "Cargar más" si no está al final
+                        if (loadedCount < totalImages) {
+                            loadMoreBtn.classList.remove('hidden');
+                        }
+                    }
+
+                    updateButtonTexts();
+                });
+            }
+
+            function loadImages(start, end) {
+                const allItems = Array.from(galleryContainer.children);
+                allItems.forEach((item, index) => {
+                    if (index >= start && index <= end) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                    observer.observe(item);
+                });
+
+                visibleCount.textContent = Math.min(end + 1, totalImages);
+
+                // Desplazar suavemente a la primera imagen visible
+                smoothScrollToFirstVisible();
+            }
+
+            // Mostrar imágenes cuando entran en el viewport
+            const visibilityObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const index = Array.from(galleryContainer.children).indexOf(entry.target);
+                        if (index >= currentVisibleStart && index <= currentVisibleEnd) {
+                            entry.target.classList.remove('hidden');
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                visibilityObserver.observe(item);
+            });
+
+            //modal
+            // --- Modal para mostrar imagen o video al hacer clic ---
+            const mediaModal = document.getElementById('mediaModal');
+            const closeMediaModal = document.getElementById('closeMediaModal');
+            const mediaContainer = document.getElementById('mediaContainer');
+
+            // Delegación de eventos: escucha clics en la galería y detecta si hay imagen o video
+            galleryContainer.addEventListener('click', function (e) {
+                const item = e.target.closest('.gallery-item');
+                if (!item) return;
+
+                const img = item.querySelector('img');
+                const video = item.querySelector('video');
+
+                if (img) {
+                    // Muestra imagen en modal
+                    mediaContainer.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+                } else if (video) {
+                    // Muestra video en modal
+                    const source = video.querySelector('source').src;
+                    mediaContainer.innerHTML = `<video src="${source}" controls autoplay></video>`;
+                }
+                mediaModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Cerrar modal
+            closeMediaModal.addEventListener('click', () => closeModalHandler());
+            mediaModal.addEventListener('click', (e) => {
+                if (e.target === mediaModal) closeModalHandler();
+            });
+            function closeModalHandler() {
+                mediaModal.style.display = 'none';
+                mediaContainer.innerHTML = '';
+                document.body.style.overflow = 'auto';
+            }
+            
+
+            updateButtonTexts();
+
+            // --- Vista previa de video al hover (solo si hay <video> en la galería) ---
+            const canHoverGallery = window.matchMedia('(hover: hover)').matches;
+            if (canHoverGallery) {
+            document.querySelectorAll('#gallery-container .gallery-item video.gallery-media').forEach(vid => {
+                // Estado inicial
+                try { vid.pause(); vid.currentTime = 0; } catch (_) {}
+                vid.muted = true; vid.playsInline = true;
+
+                const onEnter = () => vid.play().catch(() => {});
+                const onLeave = () => { vid.pause(); try { vid.currentTime = 0; } catch (_) {} };
+
+                const card = vid.closest('.gallery-item');
+                card.addEventListener('mouseenter', onEnter);
+                card.addEventListener('mouseleave', onLeave);
+
+                // Pausar si sale del viewport
+                const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) onLeave();
+                });
+                }, { threshold: 0.25 });
+                io.observe(vid);
+            });
+            }
+        });
+    </script>
+
+    <!-- Modal para mostrar imagen o video -->
+    <div id="mediaModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <span id="closeMediaModal" class="close-modal">&times;</span>
+            <div id="mediaContainer"></div>
+        </div>
+    </div>
+
+
+    
+
+
+  <!-- Quita esta línea si Font Awesome ya está en tu head global -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/footer.css">
+
+
+ <!-- Ticker superior del footer -->
+<div class="footer-ticker" role="presentation" aria-label="California Studio ticker">
+  <div class="ticker-inner">
+    <div class="ticker-track" id="footerTickerA">
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+    </div>
+    <div class="ticker-track" id="footerTickerB" aria-hidden="true"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <!-- Columna: Marca -->
+    <div class="footer-col brand">
+      <img src="logos/CALIFORNIAESTUDIO_LOGO04.webp" alt="California Logo" class="logo-image">
+
+      <nav class="social-icons under-logo" aria-label="Redes sociales">
+        <a class="icon" href="mailto:info@californiaestudio.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a class="icon" href="https://vimeo.com/" target="_blank" rel="noopener" aria-label="Vimeo">
+          <i class="fab fa-vimeo-v"></i>
+        </a>
+        <a class="icon" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="icon" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="icon" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Columna: Ubicación -->
+    <div class="footer-col location">
+      <h3>Barcelona</h3>
+      <p>
+        Calle Zamora 45<br>
+        España, Barcelona 08005<br>
+        +34 93 216 05 00<br>
+        <a href="mailto:info@californiaestudio.com">info@californiaestudio.com</a>
+      </p>
+    </div>
+
+    <!-- Columna: Legal -->
+    <nav class="footer-col legal" aria-label="Enlaces legales">
+      <h4>Legal</h4>
+      <ul class="legal-list">
+        <li><a href="legal.html">Aviso Legal</a></li>
+        <li><a href="privacidad.html">Política de Privacidad</a></li>
+        <li><a href="cookies.html">Política de Cookies</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Ticker loop perfecto
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.footer-ticker .ticker-inner');
+    const trackA = document.getElementById('footerTickerA');
+    const trackB = document.getElementById('footerTickerB');
+
+    function fillTracks() {
+      if (!container || !trackA || !trackB) return;
+      if (!trackA.dataset.base) trackA.dataset.base = trackA.innerHTML;
+      else trackA.innerHTML = trackA.dataset.base;
+
+      trackB.innerHTML = '';
+      const baseHTML = trackA.dataset.base;
+      const target = container.clientWidth * 2;
+      while (trackA.scrollWidth < target) trackA.insertAdjacentHTML('beforeend', baseHTML);
+      trackB.innerHTML = trackA.innerHTML;
+
+      [trackA, trackB].forEach(el => el.style.animation = 'none');
+      void trackA.offsetWidth;
+      [trackA, trackB].forEach(el => el.style.animation = '');
+    }
+
+    let resizeTimer;
+    const onResize = () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(fillTracks, 150); };
+
+    fillTracks();
+    window.addEventListener('resize', onResize);
+  });
+</script>
+
+
+
+    <!-- Scripts de carga optimizados con localStorage -->
+    <script>
+        // Función para monitorear la carga de recursos
+        function monitorearCargaRecursos() {
+            const elementosMultimedia = [
+                ...document.querySelectorAll('img, video, iframe'),
+                ...document.querySelectorAll('[data-imagen-fondo]')
+            ];
+
+            const elementosCargados = new Set();
+            const preloader = document.getElementById('preloader');
+
+            // Verificar elementos que ya están cargados al iniciar
+            elementosMultimedia.forEach(elemento => {
+                if (elemento.tagName === 'IMG' && elemento.complete) {
+                    elementosCargados.add(elemento);
+                } else if (elemento.tagName === 'VIDEO' && elemento.readyState >= 3) {
+                    elementosCargados.add(elemento);
+                } else if (elemento.tagName === 'IFRAME' && elemento.contentWindow) {
+                    elementosCargados.add(elemento);
+                }
+            });
+
+            function finalizarCarga() {
+                // Marcar en localStorage que los recursos ya están cargados
+                localStorage.setItem('recursosCargados', 'true');
+
+                // Ocultar el preloader con animación suave
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.classList.add('preloader-oculto');
+                }, 500);
+            }
+
+            // Si no hay elementos que cargar o ya están todos cargados
+            if (elementosMultimedia.length === 0 || elementosCargados.size === elementosMultimedia.length) {
+                finalizarCarga();
+                return;
+            }
+
+            // Configurar eventos para los elementos que faltan por cargar
+            elementosMultimedia.forEach(elemento => {
+                if (elementosCargados.has(elemento)) return;
+
+                if (elemento.tagName === 'IMG') {
+                    elemento.addEventListener('load', () => {
+                        elementosCargados.add(elemento);
+                        if (elementosCargados.size >= elementosMultimedia.length) {
+                            finalizarCarga();
+                        }
+                    });
+                    elemento.addEventListener('error', () => {
+                        elementosCargados.add(elemento);
+                        if (elementosCargados.size >= elementosMultimedia.length) {
+                            finalizarCarga();
+                        }
+                    });
+                } else if (elemento.tagName === 'VIDEO') {
+                    elemento.addEventListener('canplaythrough', () => {
+                        elementosCargados.add(elemento);
+                        if (elementosCargados.size >= elementosMultimedia.length) {
+                            finalizarCarga();
+                        }
+                    });
+                    elemento.addEventListener('error', () => {
+                        elementosCargados.add(elemento);
+                        if (elementosCargados.size >= elementosMultimedia.length) {
+                            finalizarCarga();
+                        }
+                    });
+                } else if (elemento.tagName === 'IFRAME') {
+                    elemento.addEventListener('load', () => {
+                        elementosCargados.add(elemento);
+                        if (elementosCargados.size >= elementosMultimedia.length) {
+                            finalizarCarga();
+                        }
+                    });
+                    elemento.addEventListener('error', () => {
+                        elementosCargados.add(elemento);
+                        if (elementosCargados.size >= elementosMultimedia.length) {
+                            finalizarCarga();
+                        }
+                    });
+                } else if (elemento.hasAttribute('data-imagen-fondo')) {
+                    const imagen = new Image();
+                    imagen.src = elemento.getAttribute('data-imagen-fondo');
+                    imagen.onload = imagen.onerror = () => {
+                        elementosCargados.add(elemento);
+                        if (elementosCargados.size >= elementosMultimedia.length) {
+                            finalizarCarga();
+                        }
+                    };
+                }
+            });
+
+            // Temporizador de seguridad (10 segundos máximo)
+            setTimeout(finalizarCarga, 10000);
+        }
+
+        // Verificar si ya se cargaron los recursos antes
+        if (localStorage.getItem('recursosCargados') === 'true') {
+            // Ocultar preloader inmediatamente
+            document.getElementById('preloader').classList.add('preloader-oculto');
+
+            // Verificar periódicamente si hay nuevos elementos que cargar
+            setTimeout(() => {
+                const nuevosElementos = [
+                    ...document.querySelectorAll('img:not([src]), video:not([src]), iframe:not([src])'),
+                    ...document.querySelectorAll('[data-imagen-fondo]:not([data-imagen-fondo=""])')
+                ];
+
+                if (nuevosElementos.length > 0) {
+                    monitorearCargaRecursos();
+                }
+            }, 500);
+        } else {
+            // Es la primera carga, monitorear todos los recursos
+            document.addEventListener('DOMContentLoaded', monitorearCargaRecursos);
+        }
+    </script>
+<script>document.querySelectorAll(".js-host").forEach(function(e){e.textContent=location.hostname;});</script>
+</body>
+
+</html>

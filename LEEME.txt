@@ -1,0 +1,11 @@
+CALIFORNIA - sitio estatico para GitHub Pages
+=============================================
+Carpetas que debes copiar tu (no van incluidas por peso):
+  img/         -> (opcional, vacia)
+  video/       -> REEL_2023_V111.mp4, VID3.mp4, VID4.mp4, VID5.mp4
+  imggaleria/  -> imagenes de la galeria (jpg, png, webp...)
+
+Cada vez que cambies las imagenes de imggaleria/ ejecuta actualizar-galeria.ps1
+(clic derecho -> Ejecutar con PowerShell). Genera js/galeria-data.js con la lista.
+
+Limites de GitHub: cada archivo < 100 MB (mejor < 50 MB) y el sitio < 1 GB en total.

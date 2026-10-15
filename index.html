@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Título -->
+  <title>CALIFORNIA | Marketing Digital Agency</title>
+
+  <!-- Meta básicos -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <meta name="author" content="CALIFORNIA">
+  <meta name="description" content="CALIFORNIA: agencia de marketing digital. Soluciones innovadoras para asegurar el crecimiento de tu negocio.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CALIFORNIA | Marketing Digital Agency">
+  <meta property="og:description" content="Soluciones innovadoras en Marketing Digital. Asegura el crecimiento de tu negocio.">
+    <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CALIFORNIA | Marketing Digital Agency">
+  <meta name="twitter:description" content="Soluciones innovadoras en Marketing Digital. Asegura el crecimiento de tu negocio.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="logos/CALIFORNIAESTUDIO_LOGO04.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="logos/CALIFORNIAESTUDIO_LOGO04.webp">
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Extensiones opcionales del tema (si las necesitas)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkgray: '#1a1a1a',
+          },
+          fontFamily: {
+            atkinson: ['"Atkinson Hyperlegible Mono"', 'monospace'],
+            didot: ['Didot', 'serif'],
+            roboto: ['Roboto', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome (el menú también intenta cargarlo si falta, pero lo dejamos explícito) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script src="js/galeria-data.js"></script>
+</head>
+<body>
+  <!-- Aviso de cookies -->
+  <div id="barraaceptacion" style="display:none;">
+    <div class="inner">
+      CALIFORNIA utiliza cookies propias y de terceros para obtener información y realizar análisis estadísticos sobre el uso de nuestro sitio web. Por favor, acepte o rechace las cookies para continuar navegando.
+      <button class="ok" onclick="aceptarCookies()">Aceptar</button>
+      <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+      <a href="cookies.html" class="info">Más información</a>
+    </div>
+  </div>
+
+  
+<div id="menu-root-california">
+  <!-- Botón hamburguesa sticky -->
+  <div class="menu-toggle-wrapper">
+    <div id="menuToggle"
+      class="menu-toggle text-white text-2xl cursor-pointer bg-black bg-opacity-70 rounded-full w-10 h-10 flex items-center justify-center shadow"
+      aria-label="Abrir/cerrar menú" aria-expanded="false" role="button" tabindex="0">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Menú desktop (overlay superior) -->
+  <div id="desktopMenu"
+       class="navigation-row hidden lg:flex flex-row items-center desktop-menu fixed-menu p-5"
+       style="width: 100%; height: 21%; display: none;">
+    <img src="logos/CALIFORNIAESTUDIO_LOGO_Menu1.webp" alt="CALIFORNIA"
+         class="responsive-logo w-auto mt-24" />
+    <div class="flex flex-col items-start justify-center flex-grow menu-links-container pl-5">
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="paginagaleria.html">Galería</a>
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="#aboutus">Quiénes Somos</a>
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="#contact">Contacto</a>
+    </div>
+  </div>
+
+  <!-- Menú móvil/tablet (slide desde la izquierda) -->
+  <div id="mobileMenuContainer" class="mobile-menu-container lg:hidden">
+    <div class="mobile-menu h-full flex flex-col p-5">
+      <img src="logos/CALIFORNIAESTUDIO_LOGO_Menu1.webp" alt="CALIFORNIA" class="responsive-logo w-auto mt-24" />
+      <div class="flex flex-col items-start justify-center flex-grow menu-links-container pl-5">
+        <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+           href="paginagaleria.html">Galería</a>
+        <a class="video-link nav-link responsive-nav-link w-full text-center py-3 px-5 text-gray-300"
+           href="#aboutus">Quiénes Somos</a>
+        <a class="video-link nav-link responsive-nav-link w-full text-center py-3 px-5 text-gray-300"
+           href="#contact">Contacto</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Botón hamburguesa por delante de todo el contenido del sitio y del propio menú */
+  .menu-toggle-wrapper {
+    position: fixed;
+    top: 1rem;    /* Tailwind top-4 */
+    left: 1rem;   /* Tailwind left-4 */
+    z-index: 1050; /* > overlays del menú y del video */
+  }
+
+  /* Estilos mínimos del menú */
+  .nav-link {
+    color: white !important;
+    text-decoration: none;
+    font-family: "Atkinson Hyperlegible Mono", monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  .desktop-menu {
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(5px);
+  }
+  .mobile-menu {
+    background-color: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(5px);
+  }
+  .responsive-logo {
+    display: block;
+    width: 16vh;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+  .responsive-nav-link { font-size: 2vh; }
+
+  @media (max-width: 1024px) {
+    .responsive-logo { height: 10rem; }
+    .menu-links-container { margin-top: -1.5rem; }
+  }
+
+  /* Overlays del menú: por debajo del botón */
+  .fixed-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1040; /* menor que .menu-toggle-wrapper */
+    transition: transform 0.3s ease;
+  }
+
+  /* Contenedor del menú móvil */
+  .mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1040; /* menor que .menu-toggle-wrapper */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: none;
+    width: 100%;
+    max-width: 20rem;
+    will-change: transform;
+    pointer-events: none; /* no captura clics cuando está cerrado */
+  }
+  .mobile-menu-container.open {
+    transform: translateX(0);
+    display: block;
+    pointer-events: auto; /* captura clics solo cuando está abierto */
+  }
+
+  .video-link:hover {
+    text-decoration: none;
+    color: #c8cbcc;
+    font-weight: bold;
+  }
+
+  /* Corchetes en hover/focus para items del menú */
+    #menu-root-california .nav-link {
+    display: inline-block; /* Permite centrar y reservar espacio de los pseudo-elementos */
+    position: relative;
+    }
+
+    /* Reservamos espacio para los corchetes sin mostrarlos inicialmente */
+    #menu-root-california .nav-link::before,
+    #menu-root-california .nav-link::after {
+    color: currentColor;         /* Toman el mismo color que el enlace */
+    font-weight: 700;            /* Un poco más marcado para los corchetes */
+    opacity: 0;                  /* Ocultos por defecto */
+    visibility: hidden;          /* No visibles, pero conservan el espacio */
+    transition: opacity .18s ease-in-out;
+    }
+
+    #menu-root-california .nav-link::before {
+    content: "[";
+    margin-right: .25rem;        /* Espacio entre el corchete y el texto */
+    }
+
+    #menu-root-california .nav-link::after {
+    content: "]";
+    margin-left: .25rem;         /* Espacio entre el texto y el corchete */
+    }
+
+    /* Mostrar corchetes al hover / focus con teclado / toque rápido en móvil */
+    #menu-root-california .nav-link:hover::before,
+    #menu-root-california .nav-link:hover::after,
+    #menu-root-california .nav-link:focus-visible::before,
+    #menu-root-california .nav-link:focus-visible::after,
+    #menu-root-california .nav-link:active::before,
+    #menu-root-california .nav-link:active::after {
+    opacity: 1;
+    visibility: visible;
+    }
+
+    /* Forzar el logo a blanco (todas las partes no transparentes) */
+    #menu-root-california .responsive-logo {
+    filter: brightness(0) invert(1);
+    /* -webkit-filter opcional para compatibilidad muy antigua */
+    -webkit-filter: brightness(0) invert(1);
+    }
+</style>
+
+<script>
+(() => {
+  if (window.__CALIFORNIA_MENU_INIT__) return;
+  window.__CALIFORNIA_MENU_INIT__ = true;
+
+  const ready = (fn) => {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  };
+
+  ready(() => {
+    const root = document.getElementById('menu-root-california');
+    const menuToggle = root ? root.querySelector('#menuToggle') : null;
+    const menuIcon = menuToggle ? menuToggle.querySelector('i') : null;
+    const desktopMenu = root ? root.querySelector('#desktopMenu') : null;
+    const mobileMenu = root ? root.querySelector('#mobileMenuContainer') : null;
+    const logo = root ? root.querySelector('.responsive-logo') : null;
+
+    let menuVisible = false;
+
+    function initializeMenu() {
+      if (desktopMenu) desktopMenu.style.display = 'none';
+      if (mobileMenu) {
+        mobileMenu.style.display = 'none';
+        mobileMenu.classList.remove('open');
+        mobileMenu.style.pointerEvents = 'none';
+      }
+      if (menuIcon) menuIcon.className = 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function updateMenuVisibility() {
+      const isDesktop = window.innerWidth >= 1024;
+
+      if (isDesktop) {
+        if (desktopMenu) desktopMenu.style.display = menuVisible ? 'flex' : 'none';
+        if (mobileMenu) {
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.display = 'none';
+          mobileMenu.style.pointerEvents = 'none';
+        }
+      } else {
+        if (desktopMenu) desktopMenu.style.display = 'none';
+        if (mobileMenu) {
+          mobileMenu.style.display = 'block';
+          if (menuVisible) {
+            mobileMenu.classList.add('open');
+            mobileMenu.style.pointerEvents = 'auto';
+          } else {
+            mobileMenu.classList.remove('open');
+            mobileMenu.style.pointerEvents = 'none';
+          }
+        }
+      }
+
+      if (menuIcon) menuIcon.className = menuVisible ? 'fas fa-times' : 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', menuVisible ? 'true' : 'false');
+    }
+
+    // Init
+    initializeMenu();
+
+    // Toggle click/Enter
+    if (menuToggle) {
+      menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        menuVisible = !menuVisible;
+        updateMenuVisibility();
+      });
+      menuToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          menuVisible = !menuVisible;
+          updateMenuVisibility();
+        }
+      });
+    }
+
+    // Cerrar al pulsar un enlace (solo móvil)
+    root.querySelectorAll('#mobileMenuContainer .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 1024) {
+          menuVisible = false;
+          updateMenuVisibility();
+        }
+      });
+    });
+
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuVisible) {
+        menuVisible = false;
+        updateMenuVisibility();
+      }
+    });
+
+    // Ajuste en resize: resetea a oculto
+    window.addEventListener('resize', () => {
+      menuVisible = false;
+      if (window.innerWidth >= 1024) {
+        if (desktopMenu) desktopMenu.style.display = 'none';
+        if (mobileMenu) {
+          mobileMenu.style.display = 'none';
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.pointerEvents = 'none';
+        }
+      } else {
+        if (mobileMenu) {
+          mobileMenu.style.display = 'block';
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.pointerEvents = 'none';
+        }
+        if (desktopMenu) desktopMenu.style.display = 'none';
+      }
+      if (menuIcon) menuIcon.className = 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    });
+
+    // Logo clicable -> home
+    if (logo) {
+      logo.style.cursor = 'pointer';
+      logo.addEventListener('click', () => { window.location.href = 'index.html'; });
+    }
+
+    // Scroll suave para secciones
+    root.querySelectorAll('a[href="#gallery"], a[href="#contact"], a[href="#aboutus"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          e.preventDefault();
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          if (history.pushState) history.pushState(null, null, targetId);
+          else window.location.hash = targetId;
+        }
+      });
+    });
+
+    // Carga Font Awesome si no está (respaldo)
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+      const fa = document.createElement('link');
+      fa.rel = 'stylesheet';
+      fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
+      document.head.appendChild(fa);
+    }
+  });
+})();
+</script>
+
+<!-- Preloader - Pantalla de carga inicial -->
+<div class="preloader" id="preloader" aria-hidden="true">
+<div class="loader">
+  <div class="loader-logo" aria-hidden="true">CALIFORNIA</div>
+
+  <div class="loader-progress" id="loaderProgressWrap" aria-label="Progreso de carga">
+    <div class="loader-progress-bar" id="loaderProgress"></div>
+  </div>
+  <div class="loader-percent" id="loaderPercent" aria-live="polite">0%</div>
+</div>
+</div>
+
+  <!-- Video principal -->
+  
+<div class="content-container w-full lg:flex-grow relative">
+  <!-- Video (solo en desktop) -->
+  <div class="video-wrapper hidden lg:block">
+    <div class="video-container w-full h-full relative overflow-hidden">
+      <video
+        id="mainVideo"
+        class="full-width-video"
+        playsinline
+        muted
+        loop
+        preload="metadata"
+        data-lazy-video
+        data-autoplay="true"
+        data-src="video/REEL_2023_V111.mp4"
+      >
+        <!-- Sin <source>: index.html añadirá el <source> cuando entre en viewport -->
+      </video>
+
+      <button
+        id="muteButton"
+        class="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all absolute bottom-4 right-4 z-30"
+        aria-label="Alternar silencio">
+        <i class="fas fa-volume-mute"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Franja ticker bajo el video -->
+  <div class="ticker-bar" role="presentation" aria-label="California Estudio ticker">
+    <div class="ticker-inner">
+      <div class="ticker-track" id="tickerTrackA">
+        <span class="item">CALIFORNIA ESTUDIO</span><span class="sep" aria-hidden="true"></span>
+        <span class="item">CALIFORNIA ESTUDIO</span><span class="sep" aria-hidden="true"></span>
+        <span class="item">CALIFORNIA ESTUDIO</span><span class="sep" aria-hidden="true"></span>
+        <span class="item">CALIFORNIA ESTUDIO</span><span class="sep" aria-hidden="true"></span>
+        <span class="item">CALIFORNIA ESTUDIO</span><span class="sep" aria-hidden="true"></span>
+      </div>
+      <div class="ticker-track" id="tickerTrackB" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .full-width-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background: #000; /* fallback si el poster no carga */
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .video-container { background: #000; } /* evita "pantalla en blanco" antes de pintar */
+
+  .ticker-bar {
+    --ticker-duration: 30s;
+    --gap: 2rem;
+    background: #000;
+    color: #fff;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+  }
+  .ticker-inner {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 1.25rem;
+    min-height: 3rem;
+  }
+
+  .ticker-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap);
+    white-space: nowrap;
+    padding: 0;
+    will-change: transform;
+    animation: marqueeA var(--ticker-duration) linear infinite;
+    transform: translate3d(0, -50%, 0);
+  }
+  #tickerTrackB { animation-name: marqueeB; }
+
+  .ticker-bar .item {
+    font-family: system-ui,-apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+    color: #fff;
+  }
+  .ticker-bar .sep {
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    background: #fff;
+    flex: 0 0 auto;
+  }
+  @keyframes marqueeA {
+    0%   { transform: translate3d(0, -50%, 0); }
+    100% { transform: translate3d(-100%, -50%, 0); }
+  }
+  @keyframes marqueeB {
+    0%   { transform: translate3d(calc(100% + var(--gap)), -50%, 0); }
+    100% { transform: translate3d(0, -50%, 0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-track { animation: none; transform: translate3d(0, -50%, 0); }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('mainVideo');
+    const muteButton = document.getElementById('muteButton');
+
+    if (muteButton && video) {
+      muteButton.addEventListener('click', function () {
+        video.muted = !video.muted;
+        const icon = this.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-volume-mute', video.muted);
+          icon.classList.toggle('fa-volume-up', !video.muted);
+        }
+      });
+    }
+
+    // ---------- Ticker: duplicación dinámica ----------
+    const videoTickerBar = document.querySelector('.content-container .ticker-bar');
+    const container = videoTickerBar ? videoTickerBar.querySelector('.ticker-inner') : null;
+    const trackA = document.getElementById('tickerTrackA');
+    const trackB = document.getElementById('tickerTrackB');
+
+    function fillTracks() {
+      if (!container || !trackA || !trackB) return;
+      if (!trackA.dataset.base) {
+        trackA.dataset.base = trackA.innerHTML;
+      } else {
+        trackA.innerHTML = trackA.dataset.base;
+      }
+      trackB.innerHTML = '';
+
+      const baseHTML = trackA.dataset.base;
+      const target = container.clientWidth * 2;
+      while (trackA.scrollWidth < target) {
+        trackA.insertAdjacentHTML('beforeend', baseHTML);
+      }
+      trackB.innerHTML = trackA.innerHTML;
+
+      [trackA, trackB].forEach(el => el.style.animation = 'none');
+      void trackA.offsetWidth;
+      [trackA, trackB].forEach(el => el.style.animation = '');
+    }
+
+    (window.requestIdleCallback || function(cb){ setTimeout(cb, 0); })(fillTracks);
+    window.addEventListener('resize', () => {
+      clearTimeout(window.__tickerResizeTimer);
+      window.__tickerResizeTimer = setTimeout(fillTracks, 150);
+    });
+  });
+</script>
+
+  <!-- Contenido principal del sitio -->
+  
+<style>
+  .carousel { overflow: hidden; }
+
+  /* Contenedor del grid centrado y con ancho máximo coherente */
+  .carousel-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin: 6rem auto 0;
+    width: min(1600px, 94%);   /* antes: min(1200px, 92%) */
+    justify-items: center;
+    align-items: start;
+    margin: 2.5rem auto 0;                        
+    width: min(var(--container-max), var(--container-fluid));
+  }
+
+  .carousel-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;                        /* texto y card toman el ancho de la columna */
+  }
+
+  .carousel-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background: #000;
+    width: 100%;                        /* ocupa toda la columna (sin 55vh) */
+  }
+
+  .videocarousel {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background: #000;
+    filter: grayscale(1);
+    transition: filter .25s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .carousel-card:hover .videocarousel { filter: none; }
+  }
+
+  .textcard {
+    color: #111;
+    font-weight: 700;
+    letter-spacing: .02em;
+  }
+  
+
+  /* Modal */
+  .modal-overlay {
+    position: fixed; inset: 0; display: none;
+    background: rgba(0,0,0,.8);
+    justify-content: center; align-items: center;
+    z-index: 9999;
+  }
+  .modal-content { position: relative; max-width: 90vw; max-height: 85vh; width: 100%; }
+  .modal-content video { width: 100%; max-height: 85vh; display: block; background: #000; }
+  .close-modal { position: absolute; top: .5rem; right: .75rem; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+
+  .carousel-cta {
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto 2rem;
+    width: min(1600px, 94%);   
+    width: min(var(--container-max), var(--container-fluid));
+  }
+
+  .watch-more-btn {
+    display: inline-block; background: #e75528; color: #fff; text-decoration: none;
+    padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 800; letter-spacing: .02em;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15); transition: background-color .2s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .watch-more-btn:hover { background: #000; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+  .watch-more-btn:active { transform: translateY(0); box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+  .watch-more-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  /* Responsive: 1 columna centrada en <=1024px */
+  @media (max-width: 1024px) {
+    .carousel-group {
+      grid-template-columns: 1fr;
+      width: min(720px, 92%);
+      gap: 1.25rem;
+    }
+  }
+
+  :root {
+    --container-max: 1600px;     /* ajusta según tu pantalla (1720/1800 si quieres más ancho) */
+    --container-fluid: 94%;
+    --accent-lilac: #e75528;     /* lila (Tailwind purple-500) */
+  }
+
+  /* Encabezado alineado con la grilla */
+  .carousel-header {
+    width: min(var(--container-max), var(--container-fluid));
+    margin: 3rem auto 0;           /* separa de la franja superior del sitio */
+    color: #111;
+  }
+  .carousel-header h1 {
+    margin: 0 0 .5rem;
+    font-family: 'Archivo Black', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 800;
+    letter-spacing: .5px;
+    color: var(--accent-lilac);
+    font-size: clamp(2rem, 3vw + 1rem, 4rem);
+  }
+
+  /* Hover: agranda la card y pinta el mini título */
+  .carousel-card-container { position: relative; }
+  .carousel-card {
+    transition: transform .25s ease, box-shadow .25s ease;
+    transform-origin: center;
+    will-change: transform;
+  }
+  .textcard { transition: color .2s ease; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .carousel-card-container:hover { z-index: 2; }
+    .carousel-card-container:hover .carousel-card {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(0,0,0,.2);
+    }
+    .carousel-card-container:hover .textcard { color: var(--accent-lilac); } /* #e75528 */
+    .carousel-card-container:hover .videocarousel { filter: none; } /* quita el gris al pasar */
+  }
+
+  /* Respeto a accesibilidad: mismo efecto con teclado */
+  .carousel-card-container:focus-within .carousel-card {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,.2);
+  }
+  .carousel-card-container:focus-within .textcard { color: var(--accent-lilac); }
+
+  /* Desactiva animaciones si el usuario lo pide */
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-card, .textcard { transition: none; }
+  }
+</style>
+
+<div class="carousel-header">
+  <h1>FEATURED PROJECTS</h1>
+</div>
+
+<div class="carousel">
+  <div class="carousel-group">
+    <div class="carousel-card-container">
+      <div class="carousel-card">
+        <video class="videocarousel" muted playsinline preload="none" data-src="video/VID3.mp4"></video>
+      </div>
+      <div class="textcard">California Studio 01</div>
+    </div>
+
+    <div class="carousel-card-container">
+      <div class="carousel-card">
+        <video class="videocarousel" muted playsinline preload="none" data-src="video/VID4.mp4"></video>
+      </div>
+      <div class="textcard">California Studio 02</div>
+    </div>
+
+    <div class="carousel-card-container">
+      <div class="carousel-card">
+        <video class="videocarousel" muted playsinline preload="none" data-src="video/VID5.mp4"></video>
+      </div>
+      <div class="textcard">California Studio 03</div>
+    </div>
+  </div>
+</div>
+
+<div class="carousel-cta">
+  <a class="watch-more-btn" href="paginagaleria.html">Watch More</a>
+</div>
+
+<!-- Modal -->
+<div id="videoModal" class="modal-overlay" style="display: none;">
+  <div class="modal-content">
+    <span id="closeModal" class="close-modal">&times;</span>
+    <video id="modalVideo" controls autoplay playsinline></video>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const videos = document.querySelectorAll('.videocarousel');
+    const canHover = window.matchMedia('(hover: hover)').matches;
+
+    // Cargar bajo demanda: asignamos <source> solo cuando haga falta
+    function ensureSource(videoEl) {
+      if (videoEl.querySelector('source')) return true;
+      const src = videoEl.getAttribute('data-src');
+      if (!src) return false;
+      const type = 'video/mp4';
+      const s = document.createElement('source');
+      s.src = src; s.type = type;
+      videoEl.appendChild(s);
+      try { videoEl.load(); } catch(_) {}
+      return true;
+    }
+
+    // Lazy por viewport: al entrar, solo cargamos metadata
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const vid = entry.target;
+        if (entry.isIntersecting) {
+          if (ensureSource(vid)) {
+            // Carga ligera: no auto-reproducir para no saturar CPU
+            // Poster opcional: si dispones de imágenes, usa vid.setAttribute('poster', '...jpg');
+          }
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '200px' });
+    videos.forEach(v => io.observe(v));
+
+    // Vista previa en hover (solo equipos con hover)
+    if (canHover) {
+      let currentPlaying = null; // limitar a un video a la vez
+      function playPreview(vid) {
+        if (!ensureSource(vid)) return;
+        if (currentPlaying && currentPlaying !== vid) {
+          try { currentPlaying.pause(); currentPlaying.currentTime = 0; } catch(_) {}
+        }
+        currentPlaying = vid;
+        vid.muted = true;
+        vid.play().catch(()=>{});
+      }
+      function stopPreview(vid) {
+        try { vid.pause(); vid.currentTime = 0; } catch(_) {}
+        if (currentPlaying === vid) currentPlaying = null;
+      }
+      document.querySelectorAll('.carousel-card').forEach(card => {
+        const vid = card.querySelector('.videocarousel');
+        card.addEventListener('mouseenter', () => playPreview(vid));
+        card.addEventListener('mouseleave', () => stopPreview(vid));
+      });
+    }
+
+    // Modal para reproducir a pantalla grande
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const closeModal = document.getElementById('closeModal');
+
+    function openModalFrom(videoEl) {
+      const srcEl = videoEl.querySelector('source');
+      const src = srcEl ? srcEl.src : videoEl.getAttribute('data-src');
+      if (!src) return;
+      try { videoEl.pause(); } catch(_) {}
+      modalVideo.src = src;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      modalVideo.play().catch(()=>{});
+    }
+
+    videos.forEach(video => {
+      video.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModalFrom(video);
+      });
+    });
+
+    function closeModalFn() {
+      try { modalVideo.pause(); } catch(_) {}
+      modalVideo.removeAttribute('src');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    closeModal.addEventListener('click', closeModalFn);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModalFn(); });
+  });
+</script>
+
+  <div id="contact">
+    
+
+
+
+  <link rel="stylesheet" href="css/contacto.css">
+
+
+
+  <div class="flex flex-col" style="margin-top: 4rem;">
+    <!-- Hero Section -->
+    <div class="bg-[#e6e5e4] text-black pt-14 pb-14 px-8 md:px-20 text-center" style="background-color: black;color: white;">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">CONTÁCTANOS</h1>
+      <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+        Estamos aquí para ayudarte creativos.
+      </p>
+    </div>
+
+    <!-- Production Section -->
+    <div class="px-5 md:px-20 bg-[#e6e5e4] text-black" style="padding-top: 8rem;padding-bottom: 10rem;">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Contact Card 1 -->
+          <div class="contact-card bg-[#e6e5e4] p-6 rounded-lg hover:bg-gray-800 transition-all duration-300">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-1/2">
+                <h3 class="text-xl font-bold uppercase tracking-wider mb-2">NATALIA CRABBE</h3>
+                <p class="text-gray-600 uppercase text-sm tracking-wider">CEO</p>
+              </div>
+              <div class="md:w-1/2 space-y-2">
+                <p>
+                  <a href="mailto:natcrabbe@californiastudio.es" class="text-black hover:text-inherit transition-colors">
+                    natcrabbe@californiastudio.es
+                  </a>
+                </p>
+                <p>(+33) 686407686</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Card 2 -->
+          <div class="contact-card bg-[#e6e5e4] p-6 rounded-lg hover:bg-gray-800 transition-all duration-300">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-1/2">
+                <h3 class="text-xl font-bold uppercase tracking-wider mb-2">JESUS IBAÑEZ</h3>
+                <p class="text-gray-600 uppercase text-sm tracking-wider">DOG WASHER</p>
+              </div>
+              <div class="md:w-1/2 space-y-2">
+                <p>
+                  <a href="mailto:jesus@californiastudio.es" class="text-black hover:text-inherit transition-colors">
+                    jesus@californiastudio.es
+                  </a>
+                </p>
+                <p>(+34) 603825715</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  
+
+
+  <!-- Quita esta línea si Font Awesome ya está en tu head global -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/footer.css">
+
+
+ <!-- Ticker superior del footer -->
+<div class="footer-ticker" role="presentation" aria-label="California Studio ticker">
+  <div class="ticker-inner">
+    <div class="ticker-track" id="footerTickerA">
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+    </div>
+    <div class="ticker-track" id="footerTickerB" aria-hidden="true"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <!-- Columna: Marca -->
+    <div class="footer-col brand">
+      <img src="logos/CALIFORNIAESTUDIO_LOGO04.webp" alt="California Logo" class="logo-image">
+
+      <nav class="social-icons under-logo" aria-label="Redes sociales">
+        <a class="icon" href="mailto:info@californiaestudio.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a class="icon" href="https://vimeo.com/" target="_blank" rel="noopener" aria-label="Vimeo">
+          <i class="fab fa-vimeo-v"></i>
+        </a>
+        <a class="icon" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="icon" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="icon" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Columna: Ubicación -->
+    <div class="footer-col location">
+      <h3>Barcelona</h3>
+      <p>
+        Calle Zamora 45<br>
+        España, Barcelona 08005<br>
+        +34 93 216 05 00<br>
+        <a href="mailto:info@californiaestudio.com">info@californiaestudio.com</a>
+      </p>
+    </div>
+
+    <!-- Columna: Legal -->
+    <nav class="footer-col legal" aria-label="Enlaces legales">
+      <h4>Legal</h4>
+      <ul class="legal-list">
+        <li><a href="legal.html">Aviso Legal</a></li>
+        <li><a href="privacidad.html">Política de Privacidad</a></li>
+        <li><a href="cookies.html">Política de Cookies</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Ticker loop perfecto
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.footer-ticker .ticker-inner');
+    const trackA = document.getElementById('footerTickerA');
+    const trackB = document.getElementById('footerTickerB');
+
+    function fillTracks() {
+      if (!container || !trackA || !trackB) return;
+      if (!trackA.dataset.base) trackA.dataset.base = trackA.innerHTML;
+      else trackA.innerHTML = trackA.dataset.base;
+
+      trackB.innerHTML = '';
+      const baseHTML = trackA.dataset.base;
+      const target = container.clientWidth * 2;
+      while (trackA.scrollWidth < target) trackA.insertAdjacentHTML('beforeend', baseHTML);
+      trackB.innerHTML = trackA.innerHTML;
+
+      [trackA, trackB].forEach(el => el.style.animation = 'none');
+      void trackA.offsetWidth;
+      [trackA, trackB].forEach(el => el.style.animation = '');
+    }
+
+    let resizeTimer;
+    const onResize = () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(fillTracks, 150); };
+
+    fillTracks();
+    window.addEventListener('resize', onResize);
+  });
+</script>
+
+
+
+  <!-- Scripts de cookies (seguros y mínimos) -->
+  <script>
+    function getCookie(name){
+      const parts = document.cookie.split(';').map(s => s.trim());
+      for (const p of parts) {
+        if (p.startsWith(name + '=')) return decodeURIComponent(p.split('=')[1] || '');
+      }
+      return null;
+    }
+    function setCookie(name, value, days){
+      const d = new Date();
+      d.setTime(d.getTime() + (days*24*60*60*1000));
+      const expires = "; expires=" + d.toUTCString();
+      document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/; SameSite=Lax";
+    }
+    function aceptarCookies(){
+      setCookie('tiendaaviso','1',365);
+      document.getElementById("barraaceptacion").style.display="none";
+    }
+    function rechazarCookies(){
+      // No instalamos cookies no esenciales; simplemente ocultamos la barra
+      document.getElementById("barraaceptacion").style.display="none";
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const barra = document.getElementById('barraaceptacion');
+      if (getCookie('tiendaaviso') !== "1") {
+        barra.style.display = 'flex';
+      } else {
+        barra.style.display = 'none';
+      }
+    });
+
+  function monitorearCargaRecursos() {
+    const preloader = document.getElementById('preloader');
+    if (!preloader) return;
+
+    const progressWrap = document.getElementById('loaderProgressWrap');
+    const progressBar  = document.getElementById('loaderProgress');
+    const percentText  = document.getElementById('loaderPercent');
+
+    const startTs = performance.now();
+    const FORCE_SHOW = location.search.includes('loader=1');
+    const MIN_SHOW = 1200; // ms, mínimo visible para todos los casos
+    const MAX_TIMEOUT = 6000;                  // ms
+
+    // Solo esperamos a elementos marcados con data-watch
+    const elementos = [...document.querySelectorAll('[data-watch]')];
+    let total = elementos.length;
+    let cargados = 0;
+
+
+    // Si no hay elementos marcados, mostramos barra indeterminada y cerramos tras MIN_SHOW
+    if (total === 0) {
+      // Mostrar barra "determinada" basada en tiempo
+      progressWrap.classList.remove('indeterminate');
+      const startTime = performance.now();
+      const DURATION = MIN_SHOW; // mantener coherencia con el mínimo visible
+
+      function tick() {
+        const t = Math.min(1, (performance.now() - startTime) / DURATION);
+        const p = Math.floor(5 + t * 85); // de 5% a ~90%
+        progressBar.style.width = p + '%';
+        percentText.textContent = p + '%';
+        if (t < 1) requestAnimationFrame(tick);
+        else finalizarCarga();
+      }
+      requestAnimationFrame(tick);
+    } else {
+      progressWrap.classList.remove('indeterminate');
+      actualizarProgreso();
+    }
+
+    const marcarCargado = () => {
+      if (total === 0) return; // indeterminate: el cierre va por tiempo mínimo / timeout
+      cargados = Math.min(cargados + 1, total);
+      actualizarProgreso();
+      if (cargados >= total) finalizarCarga();
+    };
+
+    function actualizarProgreso() {
+      if (total === 0) return;
+      const p = Math.max(5, Math.round((cargados / total) * 100)); // empieza en 5% para feedback visual
+      progressBar.style.width = p + '%';
+      percentText.textContent = p + '%';
+    }
+
+    // Registrar listeners según tipo
+    elementos.forEach(el => {
+      if (el.tagName === 'IMG') {
+        if (el.complete) return marcarCargado();
+        el.addEventListener('load', marcarCargado, { once: true });
+        el.addEventListener('error', marcarCargado, { once: true });
+      } else if (el.tagName === 'VIDEO') {
+        // loadedmetadata es suficiente para primera pintura
+        if (el.readyState >= 1) return marcarCargado();
+        el.addEventListener('loadedmetadata', marcarCargado, { once: true });
+        el.addEventListener('error', marcarCargado, { once: true });
+      } else if (el.tagName === 'IFRAME') {
+        el.addEventListener('load', marcarCargado, { once: true });
+        el.addEventListener('error', marcarCargado, { once: true });
+      } else {
+        // Elemento genérico
+        marcarCargado();
+      }
+    });
+
+    // Failsafe: cierre por timeout aunque algo no responda
+    const maxTimer = setTimeout(finalizarCarga, MAX_TIMEOUT);
+
+    function finalizarCarga() {
+      clearTimeout(maxTimer);
+      const elapsed = performance.now() - startTs;
+      const wait = Math.max(0, MIN_SHOW - elapsed);
+
+      // Completa al 100% visualmente antes de salir
+      progressBar.style.width = '100%';
+      percentText.textContent = '100%';
+
+      setTimeout(() => ocultarPreloader(preloader), wait);
+    }
+  }
+
+  function ocultarPreloader(preloader){
+    try { localStorage.setItem('recursosCargados', 'true'); } catch(e){}
+    preloader.style.opacity = '0';
+    setTimeout(() => preloader.classList.add('preloader-oculto'), 300);
+  }
+
+  document.addEventListener('DOMContentLoaded', monitorearCargaRecursos);
+
+  // Lazy load y control de reproducción de videos
+  (function() {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function pickVariant(video) {
+      const width = Math.min(window.innerWidth || 0, screen.width || 0) || 1024;
+      const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      const fast = conn && !conn.saveData && (conn.effectiveType === '4g' || (conn.downlink || 0) >= 2.5);
+
+      // Orden por red y ancho
+      if (width >= 1280 && fast && video.dataset.src1080) return video.dataset.src1080;
+      if (width >= 768 && video.dataset.src720) return video.dataset.src720;
+      if (video.dataset.src480) return video.dataset.src480;
+      return video.dataset.src || ''; // fallback
+    }
+
+    function ensureSource(video, src) {
+      let source = video.querySelector('source');
+      if (!source) {
+        source = document.createElement('source');
+        source.type = 'video/mp4';
+        video.appendChild(source);
+      }
+      if (source.src !== src) source.src = src;
+    }
+
+    function loadVideo(video) {
+      if (video.dataset.loaded === '1') return;
+      const src = pickVariant(video);
+      if (!src) return;
+      ensureSource(video, src);
+      video.preload = 'metadata';
+      video.load();
+
+      // Autoplay respetando accesibilidad
+      const wantsAutoplay = video.autoplay || video.dataset.autoplay === 'true';
+      if (wantsAutoplay && !prefersReducedMotion) {
+        video.muted = true; // requerido por navegadores móviles
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {/* silenciar errores de autoplay bloqueado */});
+        }
+      }
+      video.dataset.loaded = '1';
+    }
+
+    function pauseIfOffscreen(video) {
+      if (video.hasAttribute('data-keep-playing')) return;
+      if (!video.paused) video.pause();
+    }
+
+    const MIN_VISIBLE = 0.11; // al menos 55% del alto visible para considerarlo "en viewport"
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const v = entry.target;
+        if (entry.isIntersecting) {
+          // Carga (primera vez)
+          loadVideo(v);
+
+          // Reproducir al entrar o re-entrar si el autoplay está permitido
+          const wantsAutoplay = v.autoplay || v.dataset.autoplay === 'true';
+          if (wantsAutoplay && !prefersReducedMotion && v.dataset.loaded === '1' && v.paused) {
+            v.play().catch(() => { /* ignorar bloqueo de autoplay */ });
+          }
+        } else {
+          // Pausar de forma confiable cuando menos del 55% está visible
+          pauseIfOffscreen(v);
+        }
+      });
+    }, {
+      root: null,
+      threshold: MIN_VISIBLE, // evita "falsos positivos" con 1px visible
+      rootMargin: '0px'       // sin expandir el viewport
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('video[data-lazy-video]').forEach(v => io.observe(v));
+    });
+
+    // Re-selección de calidad en cambio de tamaño (opcional, conservador)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        document.querySelectorAll('video[data-lazy-video][data-loaded="1"]').forEach(v => {
+          // No hacemos downswitch mientras está reproduciendo para evitar cortes perceptibles.
+          // Si quieres upswitch al hacer fullscreen, se maneja aparte.
+        });
+      }, 300);
+    });
+  })();
+  </script>
+
+  <!-- Estilos locales (preloader + cookies) -->
+  <style>
+    body { background-color: #e6e5e4; }
+    .preloader {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: white; display: flex; justify-content: center; align-items: center;
+      z-index: 9999; transition: opacity 0.3s ease;
+    }
+    .preloader-oculto { opacity: 0; display: none !important; }
+
+    #barraaceptacion {
+      position: fixed; bottom: 0; width: 100%; background-color: rgba(0,0,0,0.9);
+      color: white; text-align: center; padding: 20px; z-index: 1000;
+      display: none; flex-direction: column; justify-content: center; align-items: center;
+    }
+    #barraaceptacion .inner { max-width: 90%; margin: 0 auto; line-height: 1.5; text-align: center; }
+    #barraaceptacion button {
+      margin: 10px; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;
+    }
+    #barraaceptacion .ok { background-color: #4caf50; color: white; }
+    #barraaceptacion .reject { background-color: #f44336; color: white; }
+    #barraaceptacion .info { color: #00bcd4; text-decoration: underline; font-size: 14px; margin-top: 10px; display: inline-block; }
+
+    @media (max-width: 768px) {
+      #barraaceptacion { padding: 15px; }
+      #barraaceptacion .inner { font-size: 14px; }
+      #barraaceptacion button { width: 80%; }
+    }
+
+    /* Loader compuesto: logo + spinner + progreso */
+    .loader {
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    }
+    .loader-logo {
+    font-weight: 900; letter-spacing: 0.14em; color: #000; user-select: none;
+    }
+    .loader-progress {
+    position: relative; width: min(420px, 70vw); height: 4px;
+    background: #ececec; border-radius: 9999px; overflow: hidden;
+    }
+    .loader-progress-bar {
+    width: 0%; height: 100%; background: #000; transition: width 200ms ease;
+    }
+    /* Modo indeterminado si no hay [data-watch] */
+    .loader-progress.indeterminate .loader-progress-bar {
+    position: absolute; width: 30%; left: 0; height: 100%;
+    animation: indeterminate-slide 1s linear infinite;
+    }
+    @keyframes indeterminate-slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(400%); }
+    }
+    .loader-percent { font-size: 0.875rem; color: #444; }
+
+    /* Accesibilidad: reducir animación si el usuario lo pide */
+    @media (prefers-reduced-motion: reduce) {
+    .spinner div { animation-duration: 3s; }
+    .loader-progress-bar { transition: none; }
+    .loader-progress.indeterminate .loader-progress-bar { animation-duration: 3s; }
+    }
+  </style>
+<script>document.querySelectorAll(".js-host").forEach(function(e){e.textContent=location.hostname;});</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* ---------- Ticker superior del footer ---------- */
+.footer-ticker {
+  --ticker-duration: 30s;
+  --gap: 2rem;
+  background: #090909;
+  color: #fff;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  width: 100%;
+}
+.footer-ticker .ticker-inner {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem 1.25rem;
+  min-height: 3rem;
+}
+.footer-ticker .ticker-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap);
+  white-space: nowrap;
+  padding: 0;
+  will-change: transform;
+  animation: footerMarqueeA var(--ticker-duration) linear infinite;
+  transform: translate3d(0, -50%, 0);
+}
+#footerTickerB { animation-name: footerMarqueeB; }
+.footer-ticker .item {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+  color: #fff;
+}
+.footer-ticker .sep {
+  display: inline-block;
+  width: 0.625rem;
+  height: 0.625rem;
+  background: #fff;
+  flex: 0 0 auto;
+}
+@keyframes footerMarqueeA {
+  0%   { transform: translate3d(0, -50%, 0); }
+  100% { transform: translate3d(-100%, -50%, 0); }
+}
+@keyframes footerMarqueeB {
+  0%   { transform: translate3d(calc(100% + var(--gap)), -50%, 0); }
+  100% { transform: translate3d(0, -50%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-ticker .ticker-track {
+    animation: none;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+/* ---------- Footer (simétrico y centrado) ---------- */
+.footer {
+  background-color: #090909;
+  color: #b3b6b9;
+  width: 100%;
+}
+
+/* Mantengo el logo a la derecha. Agrupo las dos columnas de la izquierda.
+   - Primer y segundo track: auto -> ancho al contenido.
+   - Tercer track: 1fr -> absorbe el resto y empuja el brand a la derecha. */
+.footer-inner {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 3rem;
+  display: grid;
+  grid-template-columns: minmax(14rem, auto) minmax(10rem, auto) 1fr;
+  column-gap: 1.25rem; /* más juntas “Barcelona” y “Legal” */
+  row-gap: 3rem;
+  align-items: start;
+  grid-template-areas: "location legal brand";
+}
+
+/* Columna base */
+.footer-col { min-width: 0; }
+
+.footer-col.location { grid-area: location; }
+.footer-col.legal    { grid-area: legal; }
+
+/* Marca: a la derecha y contenido centrado horizontalmente */
+.footer-col.brand {
+  grid-area: brand;
+  justify-self: end;          /* coloca la columna en el borde derecho */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* centra logo + iconos */
+  text-align: center;
+}
+
+/* --------- Marca --------- */
+.brand .logo-image {
+  display: block;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0; /* sin desplazamientos */
+  filter: brightness(0) saturate(0) invert(1) contrast(1.15);
+}
+
+.social-icons.under-logo {
+  margin-top: 1.125rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons .icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.18); /* badge sutil */
+  border-radius: 9999px;
+  transition: transform .15s ease, opacity .15s ease, background-color .15s ease;
+  opacity: 0.9;
+}
+.social-icons .icon i { font-size: 1rem; }
+.social-icons .icon:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.location h3,
+.legal h4 {
+  font-family: serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: clamp(1.35rem, 1.9vw, 1.6rem);
+  margin: 0 0 0.75rem 0;
+  color: #e8eaee; /* ligeramente más claro para título */
+}
+
+.location p,
+.legal-list a {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #b3b6b9;
+}
+.location a:hover { border-bottom-color: #fff; }
+
+/* --------- Legal --------- */
+.legal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.legal-list li { margin: 0.375rem 0; }
+
+.legal-list a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+.legal-list a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* --------- Responsivo --------- */
+@media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "location brand"
+      "legal legal";
+    column-gap: 1.25rem;
+    row-gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "location"
+      "legal";
+    gap: 2rem;
+    padding: 3rem 1rem 2.5rem;
+    text-align: center;
+  }
+  .footer-col.brand { justify-self: center; }
+  .brand .logo-image { margin-left: auto; margin-right: auto; }
+  .social-icons.under-logo { justify-content: center; }
+  .location a { border-bottom: none; }
+}
+
+/* --- Hover por marca en redes sociales --- */
+.footer {
+  --color-vimeo: #1ab7ea;
+  --color-instagram: #E1306C; /* sólido (si quieres gradiente, avísame) */
+  --color-email: #e0e0e0;
+  --color-linkedin: #0A66C2;
+  --color-youtube: #FF0000;
+}
+
+/* Ampliamos transición para color y borde */
+.social-icons .icon {
+  transition:
+    transform .15s ease,
+    opacity .15s ease,
+    background-color .15s ease,
+    color .15s ease,
+    border-color .15s ease;
+}
+
+/* Colores por red */
+.social-icons .icon[aria-label="Vimeo"]:hover {
+  background-color: var(--color-vimeo);
+  border-color: var(--color-vimeo);
+  color: #0a0a0a; /* icono oscuro sobre fondo claro */
+}
+.social-icons .icon[aria-label="Instagram"]:hover {
+  background-color: var(--color-instagram);
+  border-color: var(--color-instagram);
+  color: #ffffff; /* mejor contraste */
+}
+.social-icons .icon[aria-label="Email"]:hover {
+  background-color: var(--color-email);
+  border-color: var(--color-email);
+  color: #090909;
+}
+.social-icons .icon[aria-label="LinkedIn"]:hover {
+  background-color: var(--color-linkedin);
+  border-color: var(--color-linkedin);
+  color: #ffffff;
+}
+.social-icons .icon[aria-label="YouTube"]:hover {
+  background-color: var(--color-youtube);
+  border-color: var(--color-youtube);
+  color: #ffffff;
+}

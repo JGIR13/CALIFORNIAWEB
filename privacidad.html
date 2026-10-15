@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Título -->
+  <title>CALIFORNIA | Marketing Digital Agency</title>
+
+  <!-- Meta básicos -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <meta name="author" content="CALIFORNIA">
+  <meta name="description" content="CALIFORNIA: agencia de marketing digital. Soluciones innovadoras para asegurar el crecimiento de tu negocio.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CALIFORNIA | Marketing Digital Agency">
+  <meta property="og:description" content="Soluciones innovadoras en Marketing Digital. Asegura el crecimiento de tu negocio.">
+    <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CALIFORNIA | Marketing Digital Agency">
+  <meta name="twitter:description" content="Soluciones innovadoras en Marketing Digital. Asegura el crecimiento de tu negocio.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="logos/CALIFORNIAESTUDIO_LOGO04.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="logos/CALIFORNIAESTUDIO_LOGO04.webp">
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Extensiones opcionales del tema (si las necesitas)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            darkgray: '#1a1a1a',
+          },
+          fontFamily: {
+            atkinson: ['"Atkinson Hyperlegible Mono"', 'monospace'],
+            didot: ['Didot', 'serif'],
+            roboto: ['Roboto', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome (el menú también intenta cargarlo si falta, pero lo dejamos explícito) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script src="js/galeria-data.js"></script>
+</head>
+<body>
+  <!-- Aviso de cookies -->
+  <div id="barraaceptacion" style="display:none;">
+    <div class="inner">
+      CALIFORNIA utiliza cookies propias y de terceros para obtener información y realizar análisis estadísticos sobre el uso de nuestro sitio web. Por favor, acepte o rechace las cookies para continuar navegando.
+      <button class="ok" onclick="aceptarCookies()">Aceptar</button>
+      <button class="reject" onclick="rechazarCookies()">Rechazar</button>
+      <a href="cookies.html" class="info">Más información</a>
+    </div>
+  </div>
+
+  
+<div id="menu-root-california">
+  <!-- Botón hamburguesa sticky -->
+  <div class="menu-toggle-wrapper">
+    <div id="menuToggle"
+      class="menu-toggle text-white text-2xl cursor-pointer bg-black bg-opacity-70 rounded-full w-10 h-10 flex items-center justify-center shadow"
+      aria-label="Abrir/cerrar menú" aria-expanded="false" role="button" tabindex="0">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- Menú desktop (overlay superior) -->
+  <div id="desktopMenu"
+       class="navigation-row hidden lg:flex flex-row items-center desktop-menu fixed-menu p-5"
+       style="width: 100%; height: 21%; display: none;">
+    <img src="logos/CALIFORNIAESTUDIO_LOGO_Menu1.webp" alt="CALIFORNIA"
+         class="responsive-logo w-auto mt-24" />
+    <div class="flex flex-col items-start justify-center flex-grow menu-links-container pl-5">
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="paginagaleria.html">Galería</a>
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="#aboutus">Quiénes Somos</a>
+      <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+         href="#contact">Contacto</a>
+    </div>
+  </div>
+
+  <!-- Menú móvil/tablet (slide desde la izquierda) -->
+  <div id="mobileMenuContainer" class="mobile-menu-container lg:hidden">
+    <div class="mobile-menu h-full flex flex-col p-5">
+      <img src="logos/CALIFORNIAESTUDIO_LOGO_Menu1.webp" alt="CALIFORNIA" class="responsive-logo w-auto mt-24" />
+      <div class="flex flex-col items-start justify-center flex-grow menu-links-container pl-5">
+        <a class="video-link nav-link responsive-nav-link text-gray-300 no-underline leading-10 my-2 px-4 py-0"
+           href="paginagaleria.html">Galería</a>
+        <a class="video-link nav-link responsive-nav-link w-full text-center py-3 px-5 text-gray-300"
+           href="#aboutus">Quiénes Somos</a>
+        <a class="video-link nav-link responsive-nav-link w-full text-center py-3 px-5 text-gray-300"
+           href="#contact">Contacto</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Botón hamburguesa por delante de todo el contenido del sitio y del propio menú */
+  .menu-toggle-wrapper {
+    position: fixed;
+    top: 1rem;    /* Tailwind top-4 */
+    left: 1rem;   /* Tailwind left-4 */
+    z-index: 1050; /* > overlays del menú y del video */
+  }
+
+  /* Estilos mínimos del menú */
+  .nav-link {
+    color: white !important;
+    text-decoration: none;
+    font-family: "Atkinson Hyperlegible Mono", monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  .desktop-menu {
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(5px);
+  }
+  .mobile-menu {
+    background-color: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(5px);
+  }
+  .responsive-logo {
+    display: block;
+    width: 16vh;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+  .responsive-nav-link { font-size: 2vh; }
+
+  @media (max-width: 1024px) {
+    .responsive-logo { height: 10rem; }
+    .menu-links-container { margin-top: -1.5rem; }
+  }
+
+  /* Overlays del menú: por debajo del botón */
+  .fixed-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1040; /* menor que .menu-toggle-wrapper */
+    transition: transform 0.3s ease;
+  }
+
+  /* Contenedor del menú móvil */
+  .mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1040; /* menor que .menu-toggle-wrapper */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: none;
+    width: 100%;
+    max-width: 20rem;
+    will-change: transform;
+    pointer-events: none; /* no captura clics cuando está cerrado */
+  }
+  .mobile-menu-container.open {
+    transform: translateX(0);
+    display: block;
+    pointer-events: auto; /* captura clics solo cuando está abierto */
+  }
+
+  .video-link:hover {
+    text-decoration: none;
+    color: #c8cbcc;
+    font-weight: bold;
+  }
+
+  /* Corchetes en hover/focus para items del menú */
+    #menu-root-california .nav-link {
+    display: inline-block; /* Permite centrar y reservar espacio de los pseudo-elementos */
+    position: relative;
+    }
+
+    /* Reservamos espacio para los corchetes sin mostrarlos inicialmente */
+    #menu-root-california .nav-link::before,
+    #menu-root-california .nav-link::after {
+    color: currentColor;         /* Toman el mismo color que el enlace */
+    font-weight: 700;            /* Un poco más marcado para los corchetes */
+    opacity: 0;                  /* Ocultos por defecto */
+    visibility: hidden;          /* No visibles, pero conservan el espacio */
+    transition: opacity .18s ease-in-out;
+    }
+
+    #menu-root-california .nav-link::before {
+    content: "[";
+    margin-right: .25rem;        /* Espacio entre el corchete y el texto */
+    }
+
+    #menu-root-california .nav-link::after {
+    content: "]";
+    margin-left: .25rem;         /* Espacio entre el texto y el corchete */
+    }
+
+    /* Mostrar corchetes al hover / focus con teclado / toque rápido en móvil */
+    #menu-root-california .nav-link:hover::before,
+    #menu-root-california .nav-link:hover::after,
+    #menu-root-california .nav-link:focus-visible::before,
+    #menu-root-california .nav-link:focus-visible::after,
+    #menu-root-california .nav-link:active::before,
+    #menu-root-california .nav-link:active::after {
+    opacity: 1;
+    visibility: visible;
+    }
+
+    /* Forzar el logo a blanco (todas las partes no transparentes) */
+    #menu-root-california .responsive-logo {
+    filter: brightness(0) invert(1);
+    /* -webkit-filter opcional para compatibilidad muy antigua */
+    -webkit-filter: brightness(0) invert(1);
+    }
+</style>
+
+<script>
+(() => {
+  if (window.__CALIFORNIA_MENU_INIT__) return;
+  window.__CALIFORNIA_MENU_INIT__ = true;
+
+  const ready = (fn) => {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  };
+
+  ready(() => {
+    const root = document.getElementById('menu-root-california');
+    const menuToggle = root ? root.querySelector('#menuToggle') : null;
+    const menuIcon = menuToggle ? menuToggle.querySelector('i') : null;
+    const desktopMenu = root ? root.querySelector('#desktopMenu') : null;
+    const mobileMenu = root ? root.querySelector('#mobileMenuContainer') : null;
+    const logo = root ? root.querySelector('.responsive-logo') : null;
+
+    let menuVisible = false;
+
+    function initializeMenu() {
+      if (desktopMenu) desktopMenu.style.display = 'none';
+      if (mobileMenu) {
+        mobileMenu.style.display = 'none';
+        mobileMenu.classList.remove('open');
+        mobileMenu.style.pointerEvents = 'none';
+      }
+      if (menuIcon) menuIcon.className = 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function updateMenuVisibility() {
+      const isDesktop = window.innerWidth >= 1024;
+
+      if (isDesktop) {
+        if (desktopMenu) desktopMenu.style.display = menuVisible ? 'flex' : 'none';
+        if (mobileMenu) {
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.display = 'none';
+          mobileMenu.style.pointerEvents = 'none';
+        }
+      } else {
+        if (desktopMenu) desktopMenu.style.display = 'none';
+        if (mobileMenu) {
+          mobileMenu.style.display = 'block';
+          if (menuVisible) {
+            mobileMenu.classList.add('open');
+            mobileMenu.style.pointerEvents = 'auto';
+          } else {
+            mobileMenu.classList.remove('open');
+            mobileMenu.style.pointerEvents = 'none';
+          }
+        }
+      }
+
+      if (menuIcon) menuIcon.className = menuVisible ? 'fas fa-times' : 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', menuVisible ? 'true' : 'false');
+    }
+
+    // Init
+    initializeMenu();
+
+    // Toggle click/Enter
+    if (menuToggle) {
+      menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        menuVisible = !menuVisible;
+        updateMenuVisibility();
+      });
+      menuToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          menuVisible = !menuVisible;
+          updateMenuVisibility();
+        }
+      });
+    }
+
+    // Cerrar al pulsar un enlace (solo móvil)
+    root.querySelectorAll('#mobileMenuContainer .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 1024) {
+          menuVisible = false;
+          updateMenuVisibility();
+        }
+      });
+    });
+
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuVisible) {
+        menuVisible = false;
+        updateMenuVisibility();
+      }
+    });
+
+    // Ajuste en resize: resetea a oculto
+    window.addEventListener('resize', () => {
+      menuVisible = false;
+      if (window.innerWidth >= 1024) {
+        if (desktopMenu) desktopMenu.style.display = 'none';
+        if (mobileMenu) {
+          mobileMenu.style.display = 'none';
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.pointerEvents = 'none';
+        }
+      } else {
+        if (mobileMenu) {
+          mobileMenu.style.display = 'block';
+          mobileMenu.classList.remove('open');
+          mobileMenu.style.pointerEvents = 'none';
+        }
+        if (desktopMenu) desktopMenu.style.display = 'none';
+      }
+      if (menuIcon) menuIcon.className = 'fas fa-bars';
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    });
+
+    // Logo clicable -> home
+    if (logo) {
+      logo.style.cursor = 'pointer';
+      logo.addEventListener('click', () => { window.location.href = 'index.html'; });
+    }
+
+    // Scroll suave para secciones
+    root.querySelectorAll('a[href="#gallery"], a[href="#contact"], a[href="#aboutus"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          e.preventDefault();
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          if (history.pushState) history.pushState(null, null, targetId);
+          else window.location.hash = targetId;
+        }
+      });
+    });
+
+    // Carga Font Awesome si no está (respaldo)
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+      const fa = document.createElement('link');
+      fa.rel = 'stylesheet';
+      fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
+      document.head.appendChild(fa);
+    }
+  });
+})();
+</script>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="spinner">
+      <div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+
+  <!-- Hero superior -->
+  <header class="legal-hero">
+    <div class="legal-hero__inner">
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="index.html" class="crumb">Inicio</a>
+        <span aria-hidden="true">›</span>
+        <span class="crumb current" aria-current="page">Política de Privacidad</span>
+      </nav>
+      <h1 class="hero-title">Política de Privacidad</h1>
+      <p class="hero-subtitle">Información sobre cómo tratamos sus datos personales en CALIFORNIA.</p>
+    </div>
+  </header>
+
+  <main id="contenido" class="legal-content">
+    <article class="legal-card">
+      <section id="responsable">
+        <h2>1. Responsable del tratamiento</h2>
+        <ul class="dl">
+          <li><span>Responsable:</span> CALIFORNIA <!-- TODO: razón social completa --></li>
+          <li><span>NIF/CIF:</span> X00000000 <!-- TODO: actualizar --></li>
+          <li><span>Domicilio:</span> Calle / Ciudad / País <!-- TODO: actualizar --></li>
+          <li><span>Email:</span> privacy@california.example <!-- TODO: actualizar --></li>
+          <li><span>Dominio:</span> <span class="js-host"></span></li>
+        </ul>
+      </section>
+
+      <section id="finalidades">
+        <h2>2. Finalidades del tratamiento</h2>
+        <ul>
+          <li>Atender consultas y solicitudes enviadas a través de los formularios de contacto.</li>
+          <li>Gestionar la relación con clientes y usuarios, incluyendo comunicaciones relacionadas con los servicios.</li>
+          <li>Mejora de la experiencia de usuario y análisis de uso del sitio mediante cookies analíticas, previo consentimiento.</li>
+        </ul>
+      </section>
+
+      <section id="legitimacion">
+        <h2>3. Legitimación</h2>
+        <ul>
+          <li>Ejecución de un contrato o aplicación de medidas precontractuales.</li>
+          <li>Consentimiento del interesado para comunicaciones comerciales y cookies no necesarias.</li>
+          <li>Interés legítimo para seguridad, prevención del fraude y funcionamiento del sitio.</li>
+        </ul>
+      </section>
+
+      <section id="conservacion">
+        <h2>4. Plazo de conservación</h2>
+        <p>
+          Conservaremos los datos durante el tiempo necesario para cumplir las finalidades para las que fueron
+          recogidos y para atender posibles responsabilidades legales. Las cookies se conservan según lo indicado en la
+          <a href="cookies.html">Política de Cookies</a>.
+        </p>
+      </section>
+
+      <section id="destinatarios">
+        <h2>5. Destinatarios</h2>
+        <p>
+          Podremos compartir datos con proveedores que actúan como encargados de tratamiento para prestar servicios
+          auxiliares (alojamiento, analítica, soporte). Cuando exista transferencia internacional, se garantizarán
+          cláusulas contractuales tipo u otras garantías adecuadas.
+        </p>
+      </section>
+
+      <section id="derechos">
+        <h2>6. Derechos</h2>
+        <p>
+          Puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad mediante
+          solicitud a <a href="mailto:privacy@california.example">privacy@california.example</a>, acreditando su identidad.
+          Asimismo, puede revocar el consentimiento otorgado en cualquier momento.
+        </p>
+        <p>
+          Si considera que sus derechos no han sido atendidos, puede presentar una reclamación ante la autoridad de
+          control competente.
+        </p>
+      </section>
+
+      <section id="procedencia">
+        <h2>7. Procedencia de los datos</h2>
+        <p>
+          Los datos se obtienen del propio interesado a través de los formularios del sitio o por el uso de nuestros
+          servicios. Los datos de navegación pueden incluir direcciones IP, identificadores de dispositivos y páginas
+          visitadas, conforme a la <a href="cookies.html">Política de Cookies</a>.
+        </p>
+      </section>
+
+      <section id="seguridad">
+        <h2>8. Medidas de seguridad</h2>
+        <p>
+          Aplicamos medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad adecuado al riesgo,
+          como control de accesos, cifrado en tránsito (HTTPS) y políticas de minimización de datos.
+        </p>
+      </section>
+
+      <section id="menores">
+        <h2>9. Menores de edad</h2>
+        <p>
+          No recopilamos intencionadamente datos de menores de 14 años. Si usted es padre, madre o tutor y cree que su
+          hijo nos ha proporcionado datos, contacte con nosotros para su eliminación.
+        </p>
+      </section>
+
+      <section id="cambios">
+        <h2>10. Cambios en la política</h2>
+        <p>
+          Podemos actualizar esta Política de Privacidad para reflejar cambios legales o de tratamiento. Publicaremos
+          la versión vigente en esta misma página.
+        </p>
+        <p class="last-update">Última actualización: 15/10/2026</p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Franja oscura inferior -->
+  <div class="legal-band-bottom" aria-hidden="true"></div>
+
+  
+
+
+  <!-- Quita esta línea si Font Awesome ya está en tu head global -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/footer.css">
+
+
+ <!-- Ticker superior del footer -->
+<div class="footer-ticker" role="presentation" aria-label="California Studio ticker">
+  <div class="ticker-inner">
+    <div class="ticker-track" id="footerTickerA">
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+      <span class="item">CALIFORNIA STUDIO</span><span class="sep" aria-hidden="true"></span>
+    </div>
+    <div class="ticker-track" id="footerTickerB" aria-hidden="true"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <!-- Columna: Marca -->
+    <div class="footer-col brand">
+      <img src="logos/CALIFORNIAESTUDIO_LOGO04.webp" alt="California Logo" class="logo-image">
+
+      <nav class="social-icons under-logo" aria-label="Redes sociales">
+        <a class="icon" href="mailto:info@californiaestudio.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a class="icon" href="https://vimeo.com/" target="_blank" rel="noopener" aria-label="Vimeo">
+          <i class="fab fa-vimeo-v"></i>
+        </a>
+        <a class="icon" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="icon" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="icon" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Columna: Ubicación -->
+    <div class="footer-col location">
+      <h3>Barcelona</h3>
+      <p>
+        Calle Zamora 45<br>
+        España, Barcelona 08005<br>
+        +34 93 216 05 00<br>
+        <a href="mailto:info@californiaestudio.com">info@californiaestudio.com</a>
+      </p>
+    </div>
+
+    <!-- Columna: Legal -->
+    <nav class="footer-col legal" aria-label="Enlaces legales">
+      <h4>Legal</h4>
+      <ul class="legal-list">
+        <li><a href="legal.html">Aviso Legal</a></li>
+        <li><a href="privacidad.html">Política de Privacidad</a></li>
+        <li><a href="cookies.html">Política de Cookies</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Ticker loop perfecto
+  document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.footer-ticker .ticker-inner');
+    const trackA = document.getElementById('footerTickerA');
+    const trackB = document.getElementById('footerTickerB');
+
+    function fillTracks() {
+      if (!container || !trackA || !trackB) return;
+      if (!trackA.dataset.base) trackA.dataset.base = trackA.innerHTML;
+      else trackA.innerHTML = trackA.dataset.base;
+
+      trackB.innerHTML = '';
+      const baseHTML = trackA.dataset.base;
+      const target = container.clientWidth * 2;
+      while (trackA.scrollWidth < target) trackA.insertAdjacentHTML('beforeend', baseHTML);
+      trackB.innerHTML = trackA.innerHTML;
+
+      [trackA, trackB].forEach(el => el.style.animation = 'none');
+      void trackA.offsetWidth;
+      [trackA, trackB].forEach(el => el.style.animation = '');
+    }
+
+    let resizeTimer;
+    const onResize = () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(fillTracks, 150); };
+
+    fillTracks();
+    window.addEventListener('resize', onResize);
+  });
+</script>
+
+
+
+  <!-- Botón subir arriba -->
+  <button id="btnTop" class="btn-top" aria-label="Volver arriba" title="Volver arriba">▲</button>
+
+  <!-- Scripts cookies -->
+  <script>
+    function getCookie(c_name){
+      const c_value = document.cookie;
+      let c_start = c_value.indexOf(" " + c_name + "=");
+      if (c_start == -1) c_start = c_value.indexOf(c_name + "=");
+      if (c_start == -1) return null;
+      c_start = c_value.indexOf("=", c_start) + 1;
+      let c_end = c_value.indexOf(";", c_start);
+      if (c_end == -1) c_end = c_value.length;
+      return unescape(c_value.substring(c_start,c_end));
+    }
+    function setCookie(c_name,value,exdays){
+      const exdate = new Date();
+      exdate.setDate(exdate.getDate() + exdays);
+      const c_value = escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+      document.cookie = c_name + "=" + c_value + "; path=/";
+    }
+    function aceptarCookies(){ setCookie('tiendaaviso','1',365); document.getElementById("barraaceptacion").style.display="none"; }
+    function rechazarCookies(){ document.getElementById("barraaceptacion").style.display="none"; }
+    document.addEventListener('DOMContentLoaded', () => {
+      if(getCookie('tiendaaviso')!="1"){
+        document.getElementById("barraaceptacion").style.display="flex";
+      } else {
+        document.getElementById("barraaceptacion").style.display="none";
+      }
+    });
+  </script>
+
+  <!-- Preloader + botón top -->
+  <script>
+    function monitorearCargaRecursos() {
+      const elementosMultimedia = [
+        ...document.querySelectorAll('img, video, iframe'),
+        ...document.querySelectorAll('[data-imagen-fondo]')
+      ];
+      const elementosCargados = new Set();
+      const preloader = document.getElementById('preloader');
+
+      function finalizarCarga() {
+        try { localStorage.setItem('recursosCargados', 'true'); } catch(e){}
+        preloader.style.opacity = '0';
+        setTimeout(() => preloader.classList.add('preloader-oculto'), 500);
+      }
+
+      elementosMultimedia.forEach(el => {
+        if (el.tagName === 'IMG' && el.complete) elementosCargados.add(el);
+        else if (el.tagName === 'VIDEO' && el.readyState >= 3) elementosCargados.add(el);
+        else if (el.tagName === 'IFRAME' && el.contentWindow) elementosCargados.add(el);
+      });
+
+      if (elementosMultimedia.length === 0 || elementosCargados.size === elementosMultimedia.length) {
+        finalizarCarga(); return;
+      }
+
+      elementosMultimedia.forEach(el => {
+        if (elementosCargados.has(el)) return;
+        if (el.tagName === 'IMG') {
+          el.addEventListener('load', () => { elementosCargados.add(el); if (elementosCargados.size >= elementosMultimedia.length) finalizarCarga(); });
+          el.addEventListener('error', () => { elementosCargados.add(el); if (elementosCargados.size >= elementosMultimedia.length) finalizarCarga(); });
+        } else if (el.tagName === 'VIDEO') {
+          el.addEventListener('canplaythrough', () => { elementosCargados.add(el); if (elementosCargados.size >= elementosMultimedia.length) finalizarCarga(); });
+          el.addEventListener('error', () => { elementosCargados.add(el); if (elementosCargados.size >= elementosMultimedia.length) finalizarCarga(); });
+        } else if (el.tagName === 'IFRAME') {
+          el.addEventListener('load', () => { elementosCargados.add(el); if (elementosCargados.size >= elementosMultimedia.length) finalizarCarga(); });
+          el.addEventListener('error', () => { elementosCargados.add(el); if (elementosCargados.size >= elementosMultimedia.length) finalizarCarga(); });
+        } else if (el.hasAttribute('data-imagen-fondo')) {
+          const imagen = new Image();
+          imagen.src = el.getAttribute('data-imagen-fondo');
+          imagen.onload = imagen.onerror = () => {
+            elementosCargados.add(el);
+            if (elementosCargados.size >= elementosMultimedia.length) finalizarCarga();
+          };
+        }
+      });
+
+      setTimeout(finalizarCarga, 10000);
+    }
+
+    if (localStorage.getItem('recursosCargados') === 'true') {
+      document.getElementById('preloader').classList.add('preloader-oculto');
+      setTimeout(() => {
+        const nuevos = [
+          ...document.querySelectorAll('img:not([src]), video:not([src]), iframe:not([src])'),
+          ...document.querySelectorAll('[data-imagen-fondo]:not([data-imagen-fondo=""])')
+        ];
+        if (nuevos.length > 0) monitorearCargaRecursos();
+      }, 500);
+    } else {
+      document.addEventListener('DOMContentLoaded', monitorearCargaRecursos);
+    }
+
+    // Botón Volver arriba
+    const btnTop = document.getElementById('btnTop');
+    const toggleTop = () => { if (window.scrollY > 300) btnTop.classList.add('visible'); else btnTop.classList.remove('visible'); };
+    window.addEventListener('scroll', toggleTop);
+    btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    toggleTop();
+  </script>
+
+  <!-- Estilos locales -->
+  <style>
+    body { background-color: #e6e5e4; }
+
+    .legal-hero,
+    .legal-band-bottom {
+      background: linear-gradient(180deg, #121212 0%, #1c1c1c 60%, #222 100%);
+      color: #fff;
+    }
+    .legal-hero { padding: 5rem 1.5rem 3rem; }
+    .legal-hero__inner { max-width: 1100px; margin: 0 auto; }
+    .legal-band-bottom { height: clamp(100px, 14vw, 180px); margin-top: -1rem; z-index: 0; }
+
+    .breadcrumb { display: inline-flex; gap: .5rem; align-items: center; color: #bfbfbf; font-size: .95rem; margin-bottom: 1rem; }
+    .breadcrumb .crumb { color: #e8e8e8; text-decoration: none; }
+    .breadcrumb .crumb:hover { text-decoration: underline; }
+    .breadcrumb .current { color: #bfbfbf; }
+    .hero-title { font-weight: 800; font-size: clamp(2rem, 6vw, 3.25rem); margin: 0; letter-spacing: .02em; }
+    .hero-subtitle { margin-top: .5rem; color: #d9d9d9; font-size: clamp(1rem, 2.5vw, 1.25rem); }
+
+    .legal-content { max-width: 1100px; margin: -2rem auto 0; padding: 0 1.5rem; position: relative; z-index: 1; }
+    .legal-card { background: #fff; color: #1a1a1a; border-radius: 14px; padding: clamp(1rem, 2.5vw, 2rem); box-shadow: 0 10px 30px rgba(0,0,0,.08); line-height: 1.7; }
+    .legal-card h2 { font-size: clamp(1.15rem, 2.5vw, 1.35rem); margin: 1.25rem 0 .5rem; font-weight: 800; }
+    .legal-card p { margin: .5rem 0; }
+    .legal-card ul { padding-left: 1.1rem; margin: .4rem 0 .8rem; }
+    .legal-card .dl { list-style: none; padding: 0; }
+    .legal-card .dl li { padding: .35rem 0; }
+    .legal-card .dl li span { font-weight: 700; display: inline-block; min-width: 170px; }
+    .legal-card a { color: #0b6cf0; text-decoration: underline; }
+    .legal-card .last-update { color: #666; font-size: .95rem; margin-top: .75rem; }
+
+    .preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease; }
+    .spinner { width: 9px; height: 9px; position: relative; }
+    .spinner div { position: absolute; width: 50%; height: 150%; background: #000000; transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%)); animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease; }
+    .spinner div:nth-child(1){--delay:.1;--rotation:36;--translation:150;}
+    .spinner div:nth-child(2){--delay:.2;--rotation:72;--translation:150;}
+    .spinner div:nth-child(3){--delay:.3;--rotation:108;--translation:150;}
+    .spinner div:nth-child(4){--delay:.4;--rotation:144;--translation:150;}
+    .spinner div:nth-child(5){--delay:.5;--rotation:180;--translation:150;}
+    .spinner div:nth-child(6){--delay:.6;--rotation:216;--translation:150;}
+    .spinner div:nth-child(7){--delay:.7;--rotation:252;--translation:150;}
+    .spinner div:nth-child(8){--delay:.8;--rotation:288;--translation:150;}
+    .spinner div:nth-child(9){--delay:.9;--rotation:324;--translation:150;}
+    .spinner div:nth-child(10){--delay:1;--rotation:360;--translation:150;}
+    @keyframes spinner-fzua35 { 0%,10%,20%,30%,50%,60%,70%,80%,90%,100% { transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%)); } 50% { transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1.5%)); } }
+    .preloader-oculto { opacity: 0; display: none !important; }
+
+    #barraaceptacion { position: fixed; bottom: 0; width: 100%; background-color: rgba(0,0,0,0.9); color: white; text-align: center; padding: 20px; z-index: 1000; display: none; flex-direction: column; justify-content: center; align-items: center; }
+    #barraaceptacion .inner { max-width: 90%; margin: 0 auto; line-height: 1.5; text-align: center; }
+    #barraaceptacion button { margin: 10px; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+    #barraaceptacion .ok { background-color: #4caf50; color: white; }
+    #barraaceptacion .reject { background-color: #f44336; color: white; }
+    #barraaceptacion .info { color: #00bcd4; text-decoration: underline; font-size: 14px; margin-top: 10px; display: inline-block; }
+
+    @media (max-width: 768px) {
+      #barraaceptacion { padding: 15px; }
+      .legal-card .dl li span { min-width: 140px; }
+    }
+
+    .btn-top { position: fixed; right: 1rem; bottom: 1rem; width: 44px; height: 44px; border-radius: 50%; border: none; background: #111; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.2); cursor: pointer; opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease, visibility .2s; z-index: 1000; }
+    .btn-top.visible { opacity: 1; visibility: visible; }
+    .btn-top:hover { transform: translateY(-2px); }
+    .btn-top:active { transform: translateY(0); }
+  </style>
+<script>document.querySelectorAll(".js-host").forEach(function(e){e.textContent=location.hostname;});</script>
+</body>
+</html>
